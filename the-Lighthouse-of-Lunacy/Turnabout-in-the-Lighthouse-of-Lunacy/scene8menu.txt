@@ -18,20 +18,23 @@ goto scene8menu
 
 label Leave
 set script._override_bg bg/mainlol
-showlist 
 char lilian hide 
 "{c b}{sfx anger}{s10}(No way!{p30} Gotta help out Aurelia as much as I can.)"
 goto scene8menu
 
+labelnewscene
+script scene9
+
 #EXAMINE MENU
 label examine
+bg crimescene2
 examine fail=examine_fail
 region 8 123 16 16 skull
 region 33 82 58 81 door
 region 30 169 253 34 carpet
 region 211 122 38 37 tv
 region 134 61 46 24 vent
-region 249 2 91 166 curtains
+region 257 2 91 166 curtains
 goto scene8menu
 
 label skull
@@ -95,6 +98,52 @@ set _name TV
 addevanim 
 addev tv
 pause 30
+setflag tvget
+flag helltalk1 AND tvget AND bloodget?
+goto newscene
+goto examine
+
+label door
+sfx selectoption
+delete name=hellinger
+pause 50
+char lilian hide
+"The door to the room."
+"From the looks of it,{p15} this is the only viable entrance."
+"The doorframe is damaged near the lock.{p30} Looks like it had to be broken open."
+"Which makes this a...{p50} dare I say it?"
+"{sfx idea}A locked room mystery.{p30} That can't be good."
+"{c b}(Of course,{p15} the answer is straightforward.)"
+"{c b}(Obviously it wasn't Aurelia who locked the door.)"
+"It must have been the victim,{p15} who came in after her."
+"{c b}({sfx huh}Something about that feels wrong to me,{p15} though.)"
+"{c b}(She could have just called for help.{p30} Instead she locked the door and grabbed a knife?)"
+"{c b}(Those aren't the actions of someone confronting a burglar in their home.)"
+"You're definitely going into evidence."
+
+set _ev door
+set _description "A locked room mystery. That can't be good."
+set _name Door
+addevanim 
+addev door
+pause 30
+
+char lilian hide
+"{sfx idea}Riiight,{p15} there's something else I almost forgot."
+"Just outside this door..."
+"{sfx huh}There are a couple red drops in the hallway."
+"A faint blood trail between the study and the main hall."
+"That ought to raise some eyebrows,{p15} right!?"
+
+set _ev blood
+set _description "A faint blood trail between the study and the main hall."
+set _name Blood Trail
+addevanim 
+addev blood
+pause 30
+setflag doorget
+flag helltalk1 AND tvget AND bloodget?
+goto newscene
 goto examine
 
 label examine_fail
@@ -132,7 +181,11 @@ char lilian hide
 "{c b}({sfx whoops}Flat out refusal!?)"
 "{c b}(Time to put a little bit more pressure behind it.)"
 "You say you're a detective.{p30} But I don't think you can be with the police."
+
+set _ev susan$
+showevr
 "{sfx idea}The one that's trapping us here seemed very against getting police involved."
+hideevr
 
 char hellinger e=shrug
 "You don't have to be with the police to be a detective nowadays."
