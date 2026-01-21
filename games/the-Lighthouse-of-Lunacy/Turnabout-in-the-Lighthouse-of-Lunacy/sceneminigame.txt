@@ -1,3 +1,7 @@
+
+label scriptreset
+delflag scriptreset 
+clear
 bg timeline-bg stack
 bg timeline-bg-overlay stack
 fg timeline-overlay-2 nowait
@@ -36,7 +40,6 @@ isempty timeline11?
 obj fg/timelinebuttons/question x=162 y=333 name=q8
 isempty timeline12?
 obj fg/timelinebuttons/question x=162 y=347 name=q9
-gui Button {_crbut} name=p1 hotkey=enter_down x=170 y=469 test
 gui Button {lilianrecap} name=p2 graphic=fg/timelinebuttons/tl_lilian graphichigh=fg/timelinebuttons/tl_lilian_high x=0 y=192 
 gui Button {covaingerrecap} name=p3 graphic=fg/timelinebuttons/tl_ch graphichigh=fg/timelinebuttons/tl_ch_high x=18 y=192 
 gui Button {marikorecap} name=p4 graphic=fg/timelinebuttons/tl_m graphichigh=fg/timelinebuttons/tl_m_high x=50 y=192 
@@ -56,6 +59,8 @@ gui Button {select11} name=p17 graphic=fg/timelinebuttons/realtimelinearrow grap
 gui Button {select12} name=p18 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=347
 gui Wait 
 
+flag scriptreset scriptreset
+
 macro lilianrecap
 {deleteall}
 bg timeline-bg stack
@@ -72,7 +77,7 @@ char aurelia hide
 "This put her in shock..."
 "...but she still noticed that Mr. Cova and Dr. Hellinger eventually entered the room behind her."
 "After that, she stuck together with the others for the investigation."
-script sceneminigame
+setflag scriptreset
 endmacro
 
 macro covaingerrecap
@@ -93,71 +98,68 @@ char aurelia hide
 "Once satisfied that everything had been searched, the three of them returned upstairs via the elevator."
 "I can keep the investigation in mind, but..."
 "...for now, the end point of my timeline should be everyone being gathered at the scene."
-script sceneminigame
+setflag scriptreset
 endmacro
 
 macro select1
-set timelinebutton1 active
+set active_button 1
 {locationselect}
 endmacro
 
 macro select2
-set timelinebutton2 active
+set timeline2 cova
+set active_button 2
 {locationselect}
 endmacro
 
 macro select3
-set timelinebutton3 active
+set timeline3 mariko
+set active_button 3
 {locationselect}
 endmacro
 
 macro select4
-set timelinebutton4 active
+set active_button 4
 {selectcharacter}
 endmacro
 
 macro select5
-set timelinebutton5 active
+set active_button 5
 {selectcharacter}
 endmacro
 
 macro select6
-set timelinebutton6 active
+set active_button 6
 {selectcharacter}
 endmacro
 
 macro select7
-set timelinebutton7 active
+set active_button 7
 {selectcharacter}
 endmacro
 
 macro select8
-set timelinebutton8 active
-{selectcharacter}
-endmacro
-
-macro select8
-set timelinebutton8 active
+set active_button 8
 {selectcharacter}
 endmacro
 
 macro select9
-set timelinebutton9 active
+set active_button 9
 {selectcharacter}
 endmacro
 
 macro select10
-set timelinebutton10 active
+set active_button 10
 {selectcharacter}
 endmacro
 
 macro select11
-set timelinebutton11 active
+set active_button 11
 {selectcharacter}
 endmacro
 
 macro select12
-set timelinebutton12 active
+set active_button 12
 {selectcharacter}
 endmacro
 
@@ -182,7 +184,7 @@ char aurelia hide
 "She claims this room was to the East, but that would not align with our map."
 "Which does suggest the layout may not be quite what we assumed, but..."
 "I should ignore that and simply consider the position of these rooms in relation to the scene."
-script sceneminigame
+setflag scriptreset
 endmacro
 
 macro axioms
@@ -194,7 +196,7 @@ char aurelia hide
 "X shot Mr. Gardt directly,{p10}{n}while being in the same room."
 "There are no accomplices.{p20}{n}Nobody is covering for X."
 "Only one incident occurred.{p20}{n}The murder wasn't reenacted{n}to create false testimony."
-script sceneminigame
+setflag scriptreset
 endmacro
 
 macro selectcharacter
@@ -214,142 +216,32 @@ gui Wait
 endmacro 
 
 macro lilianselect
-is timelinebutton1 active?
-set timeline1 lilian
-is timelinebutton2 active?
-set timeline2 lilian
-is timelinebutton3 active?
-set timeline3 lilian
-is timelinebutton4 active?
-set timeline4 lilian
-is timelinebutton5 active?
-set timeline5 lilian
-is timelinebutton6 active?
-set timeline6 lilian
-is timelinebutton7 active?
-set timeline7 lilian
-is timelinebutton8 active?
-set timeline8 lilian
-is timelinebutton9 active?
-set timeline9 lilian
-is timelinebutton10 active?
-set timeline10 lilian
-is timelinebutton11 active?
-set timeline11 lilian
-is timelinebutton12 active?
-set timeline12 lilian
+joinvar tlvar timeline $active_button
+set $tlvar lilian
 {locationselect}
 endmacro 
 
 macro covaselect
-is timelinebutton1 active?
-set timeline1 cova
-is timelinebutton2 active?
-set timeline2 cova
-is timelinebutton3 active?
-set timeline3 cova
-is timelinebutton4 active?
-set timeline4 cova
-is timelinebutton5 active?
-set timeline5 cova
-is timelinebutton6 active?
-set timeline6 cova
-is timelinebutton7 active?
-set timeline7 cova
-is timelinebutton8 active?
-set timeline8 cova
-is timelinebutton9 active?
-set timeline9 cova
-is timelinebutton10 active?
-set timeline10 cova
-is timelinebutton11 active?
-set timeline11 cova
-is timelinebutton12 active?
-set timeline12 cova
+joinvar tlvar timeline $active_button
+set $tlvar cova
 {locationselect}
 endmacro 
 
 macro hellingerselect
-is timelinebutton1 active?
-set timeline1 hellinger
-is timelinebutton2 active?
-set timeline2 hellinger
-is timelinebutton3 active?
-set timeline3 hellinger
-is timelinebutton4 active?
-set timeline4 hellinger
-is timelinebutton5 active?
-set timeline5 hellinger
-is timelinebutton6 active?
-set timeline6 hellinger
-is timelinebutton7 active?
-set timeline7 hellinger
-is timelinebutton8 active?
-set timeline8 hellinger
-is timelinebutton9 active?
-set timeline9 hellinger
-is timelinebutton10 active?
-set timeline10 hellinger
-is timelinebutton11 active?
-set timeline11 hellinger
-is timelinebutton12 active?
-set timeline12 hellinger
+joinvar tlvar timeline $active_button
+set $tlvar hellinger
 {locationselect}
 endmacro 
 
 macro marikoselect
-is timelinebutton1 active?
-set timeline1 mariko
-is timelinebutton2 active?
-set timeline2 mariko
-is timelinebutton3 active?
-set timeline3 mariko
-is timelinebutton4 active?
-set timeline4 mariko
-is timelinebutton5 active?
-set timeline5 mariko
-is timelinebutton6 active?
-set timeline6 mariko
-is timelinebutton7 active?
-set timeline7 mariko
-is timelinebutton8 active?
-set timeline8 mariko
-is timelinebutton9 active?
-set timeline9 mariko
-is timelinebutton10 active?
-set timeline10 mariko
-is timelinebutton11 active?
-set timeline11 mariko
-is timelinebutton12 active?
-set timeline12 mariko
+joinvar tlvar timeline $active_button
+set $tlvar mariko
 {locationselect}
 endmacro 
 
 macro culpritselect
-is timelinebutton1 active?
-set timeline1 culprit
-is timelinebutton2 active?
-set timeline2 culprit
-is timelinebutton3 active?
-set timeline3 culprit
-is timelinebutton4 active?
-set timeline4 culprit
-is timelinebutton5 active?
-set timeline5 culprit
-is timelinebutton6 active?
-set timeline6 culprit
-is timelinebutton7 active?
-set timeline7 culprit
-is timelinebutton8 active?
-set timeline8 culprit
-is timelinebutton9 active?
-set timeline9 culprit
-is timelinebutton10 active?
-set timeline10 culprit
-is timelinebutton11 active?
-set timeline11 culprit
-is timelinebutton12 active?
-set timeline12 culprit
+joinvar tlvar timeline $active_button
+set $tlvar culprit
 {locationselect}
 endmacro 
 
@@ -410,5 +302,5 @@ char aurelia hide
 "If an issue can be resolved by altering an assumption, it might be possible to keep a timeline going."
 "As long as I can think of the correct explanation, at least."
 "Let's set a move in each slot and then try evaluating."
-script sceneminigame
+setflag scriptreset
 endmacro

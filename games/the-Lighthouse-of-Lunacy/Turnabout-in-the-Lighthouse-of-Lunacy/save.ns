@@ -70,7 +70,7 @@
                     "page": "profiles"
                 }
             ],
-            "_track": "58. Press On Our Way [Lost Judgement] - Loop",
+            "_track": "58. Press On Our Way [Lost Judgement]",
             "character": "aurelia",
             "lists": {},
             "variables": {
@@ -90,10 +90,10 @@
                 "love": "0",
                 "ev_check_img": "general/check",
                 "tv2_desc": "A very old CRT TV that doesn't work properly anymore. Displays merely a blue screen when switched on.",
+                "scriptreset": "true",
                 "tv_name": "TV",
                 "hellinger$_desc": "Age: 28{n}Gender: Female{n}A private detective sanctioned by the government to assist with and conduct investigations. Uses state-of-the-art technology to assist with forensics.",
                 "_examine_showbars": "true",
-                "lilian$_pic": "lilian",
                 "ev_mode_bg_profiles": "general/evidence",
                 "ev_z_icon_x": "25",
                 "ev_z_icon_y": "60",
@@ -111,23 +111,17 @@
                 "hellinger$_name": "Celise Hellinger",
                 "_examine_mousedown": "false",
                 "empty_pic": "empty",
-                "timelinebutton4": "inactive",
-                "timelinebutton5": "inactive",
-                "timelinebutton6": "inactive",
-                "timelinebutton7": "inactive",
-                "timelinebutton1": "inactive",
-                "timelinebutton2": "inactive",
-                "timelinebutton3": "inactive",
+                "lilian$_desc": "Age: 24{n}Gender: Female{n}A good friend of mine. Just like me, she is a member of \"The Queens of Crime\".",
+                "_font_itemset_big_size": "14",
                 "_font_itemset": "pwinternational.ttf",
                 "cake2_desc": "A cake I bought from Ander Cova.{n}It's called the \"Cova Strawberry Crisis\".{n}Looks sickeningly sweet.",
-                "timelinebutton9": "inactive",
+                "_preload": "off",
                 "susan2$_name": "Susan Holden",
-                "knife_desc": "\"It was lying near the victim. As was its sheath.\"",
                 "spray_pic": "luminol",
                 "ev_zlarrow_x": "2",
                 "ev_zlarrow_y": "90",
                 "lilian": "1",
-                "_currentlabel": "end",
+                "_currentlabel": "end4",
                 "mono$_desc": "Age: 29{n}Gender: Male {n}One of the auction guests and eyewitness to the crime.",
                 "ev_z_bg_x": "0",
                 "than$_name": "Dr. Than Leid",
@@ -158,13 +152,12 @@
                 "char_holden_defsound": "blips/holden.ogg",
                 "_textbox_wrap": "true",
                 "_music_fade": "100",
-                "_lastline": "698",
+                "_lastline": "1532",
                 "char_mariko_defsound": "blips/mariko.ogg",
                 "autopsy_desc": "\"The autopsy report received from an unknown woman. Click for details.\"",
                 "char_hellinger_defsound": "blips/hellinger.ogg",
                 "ev_spacing_x": "48",
                 "susan$_name": "Susan Holden",
-                "timeline4": "lilian",
                 "_font_list": "pwinternational.ttf",
                 "aurelia$_name": "Aurelia Chase",
                 "cake_pic": "cake",
@@ -190,8 +183,7 @@
                 "autopsy_check": "check_autopsy1.txt",
                 "cake2_name": "Strawberry Cake",
                 "ev_larrow_y": "90",
-                "_lastlabel": "markers12",
-                "ev_present_x": "90",
+                "_lastlabel": "placeculprit",
                 "_examine_skipupdate": "off",
                 "_list_bg_image": "bg/main2",
                 "presspass_desc": "Proof that I am a journalist. Grants me the special privilege to access restricted crime scenes.",
@@ -243,19 +235,17 @@
                 "_menu_fade_level": "50",
                 "char_mono_defsound": "blips/mono.ogg",
                 "cova$_desc": "Age: 42{n}Gender: Male {n}A sweets merchant we ran into before entering the tower.",
-                "_bigbutton_bg": "bg/locationselectbg",
                 "ev_z_textbox_x": "100",
                 "lilian$_name": "Lilian Maristella",
                 "holden1$_pic": "holden",
                 "mono$_name": "Mono Poly",
-                "t1location": "3",
                 "char_susan_defsound": "blips/susan.ogg",
                 "_font_gametitle_size": "16",
                 "_font_tb": "pwinternational.ttf",
                 "_nt_text_color": "",
                 "_textbox_wrap_avoid_controlled": "true",
                 "holden2$_pic": "holden",
-                "_currentline": "762",
+                "_currentline": "1795",
                 "_examine_showcursor": "true",
                 "_list_checked_y": "-10",
                 "_list_checked_x": "-10",
@@ -265,13 +255,11 @@
                 "_textbox_y": "",
                 "ev_rarrow_x": "240",
                 "_return": "",
-                "_font_itemset_big_size": "14",
                 "mono$_pic": "mono",
                 "cova$_name": "Ander Cova",
                 "_layering_method": "zorder",
                 "textskip": "1",
-                "timelinebutton10": "inactive",
-                "timelinebutton11": "inactive",
+                "_bigbutton_bg": "bg/locationselectbg",
                 "gunA_desc": "My personal handgun. Holds up to six bullets. I always carry it with me, just in case.",
                 "holden": "0",
                 "gunA_name": "Pistol",
@@ -292,8 +280,7 @@
                 "_punctuation_delay_comma": "6",
                 "ev_currentname_x": "27",
                 "tv2_pic": "tv",
-                "lilian$_desc": "Age: 24{n}Gender: Female{n}A good friend of mine. Just like me, she is a member of \"The Queens of Crime\".",
-                "timelinebutton8": "inactive",
+                "knife_desc": "\"It was lying near the victim. As was its sheath.\"",
                 "susan$_pic": "susan",
                 "door_name": "Door",
                 "char_student_defsound": "blips/student.ogg",
@@ -311,23 +298,20 @@
                 "aurelia$_pic": "aurelia",
                 "key_name": "Key",
                 "_font_itemname": "pwinternational.ttf",
-                "t4location": "4",
                 "news_pic": "clipping",
-                "endinglocation": "true",
                 "holden1$_desc": "Age: 42{n}Gender: Female{n}The real estate manager in charge of the auction.",
                 "char_than_name": "???",
                 "ev_modebutton_x": "196",
                 "ev_zarrow_img": "general/arrow_right",
                 "than2$_name": "Dr. Than Leid",
-                "_preload": "off",
+                "lilian$_pic": "lilian",
                 "_examine_cursor_img": "",
                 "pendant_pic": "pendant",
                 "_nt_text_x": "0",
                 "_nt_text_y": "1",
-                "_last_written_text": "",
+                "ev_present_x": "90",
                 "ev_present_y": "0",
                 "cova$_pic": "cova",
-                "timelinebutton12": "inactive",
                 "offtrain": "true",
                 "ev_show_mode_text": "true",
                 "ev_spacing_y": "46",
@@ -352,856 +336,13 @@
         "assets.Script",
         [],
         {
-            "_world_id": 113001656,
-            "statement": "",
-            "pri": 0,
-            "scene": "web://intro_0977.txt",
-            "cross": null,
-            "si": 25,
-            "lastline": 20,
-            "instatement": false,
-            "_objects": [
-                [
-                    "fg",
-                    [],
-                    {
-                        "dim": 0.7471666666666672,
-                        "screen_setting": "",
-                        "end": null,
-                        "name": "fg/../general/logosmall",
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "invert": 0,
-                        "greyscale": 0,
-                        "pri": 0,
-                        "pos": [
-                            -25,
-                            -15
-                        ],
-                        "loopmode": 0,
-                        "id_name": "logo",
-                        "start": 0,
-                        "tint": null,
-                        "fade": 255,
-                        "loops": false,
-                        "x": 0,
-                        "z": 3,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "wait": 1
-                    }
-                ],
-                [
-                    "textblock",
-                    [
-                        "You only have 0.990.2 - you should update to 0.9880!"
-                    ],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "color": [
-                            255,
-                            170,
-                            113
-                        ],
-                        "spd": 6,
-                        "pri": 0,
-                        "pos": [
-                            0,
-                            170
-                        ],
-                        "loopmode": 0,
-                        "id_name": "txt1",
-                        "start": 0,
-                        "text": "You only have 0.990.2 - you should update to 0.9880!",
-                        "loops": 0,
-                        "x": 0,
-                        "z": 4,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "lines": [
-                            [
-                                "You",
-                                "only",
-                                "have",
-                                "0.990.2",
-                                "-",
-                                "you",
-                                "should",
-                                "update",
-                                "to",
-                                "0.9880!"
-                            ]
-                        ]
-                    }
-                ],
-                [
-                    "textblock",
-                    [
-                        "Press ESC for options"
-                    ],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "color": [
-                            255,
-                            255,
-                            255
-                        ],
-                        "spd": 6,
-                        "pri": 0,
-                        "pos": [
-                            20,
-                            0
-                        ],
-                        "loopmode": 0,
-                        "id_name": "help",
-                        "start": 0,
-                        "text": "Press ESC for options",
-                        "loops": 0,
-                        "x": 0,
-                        "z": 4,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "lines": [
-                            [
-                                "Press",
-                                "ESC",
-                                "for",
-                                "options"
-                            ]
-                        ]
-                    }
-                ],
-                [
-                    "textblock",
-                    [
-                        "0.988 out with android support!"
-                    ],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "color": [
-                            255,
-                            170,
-                            141
-                        ],
-                        "spd": 6,
-                        "pri": 0,
-                        "pos": [
-                            116.01999999999914,
-                            152.0
-                        ],
-                        "loopmode": 0,
-                        "id_name": "txt",
-                        "start": 0,
-                        "text": "0.988 out with android support!",
-                        "loops": 0,
-                        "x": 0,
-                        "z": 4,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "lines": [
-                            [
-                                "0.988",
-                                "out",
-                                "with",
-                                "android",
-                                "support!"
-                            ]
-                        ]
-                    }
-                ],
-                [
-                    "scroll",
-                    [],
-                    {
-                        "filter": null,
-                        "amtx": 106.01999999999926,
-                        "amty": 0.0,
-                        "id_name": "_effect_",
-                        "dz": 0,
-                        "dx": -1,
-                        "dy": 0,
-                        "speed": 1,
-                        "ob_ids": [
-                            "txt"
-                        ],
-                        "wait": 0
-                    }
-                ],
-                [
-                    "timer",
-                    [],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "ticks": 420.02000000000129,
-                        "pri": -1000,
-                        "pos": [
-                            0,
-                            0
-                        ],
-                        "loopmode": 0,
-                        "start": 0,
-                        "run": "rand_text",
-                        "loops": 0,
-                        "x": 0,
-                        "z": null,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                ],
-                [
-                    "guiWait",
-                    [],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "pri": 81,
-                        "pos": [
-                            0,
-                            0
-                        ],
-                        "loopmode": 0,
-                        "id_name": "_guiWait_",
-                        "start": 0,
-                        "run": "",
-                        "loops": 0,
-                        "x": 0,
-                        "z": 0,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                ]
-            ],
-            "viewed": {}
-        },
-        [
-            "stack",
-            0
-        ]
-    ],
-    [
-        "assets.Script",
-        [],
-        {
-            "_world_id": 113001656,
-            "statement": "",
-            "pri": 0,
-            "scene": "web://intro_0977.txt/rand_text",
-            "cross": null,
-            "si": 16,
-            "lastline": 10,
-            "instatement": false,
-            "_objects": [
-                [
-                    "fg",
-                    [],
-                    {
-                        "dim": 0.7471666666666672,
-                        "screen_setting": "",
-                        "end": null,
-                        "name": "fg/../general/logosmall",
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "invert": 0,
-                        "greyscale": 0,
-                        "pri": 0,
-                        "pos": [
-                            -25,
-                            -15
-                        ],
-                        "loopmode": 0,
-                        "id_name": "logo",
-                        "start": 0,
-                        "tint": null,
-                        "fade": 255,
-                        "loops": false,
-                        "x": 0,
-                        "z": 3,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "wait": 1
-                    }
-                ],
-                [
-                    "textblock",
-                    [
-                        "You only have 0.990.2 - you should update to 0.9880!"
-                    ],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "color": [
-                            255,
-                            170,
-                            113
-                        ],
-                        "spd": 6,
-                        "pri": 0,
-                        "pos": [
-                            0,
-                            170
-                        ],
-                        "loopmode": 0,
-                        "id_name": "txt1",
-                        "start": 0,
-                        "text": "You only have 0.990.2 - you should update to 0.9880!",
-                        "loops": 0,
-                        "x": 0,
-                        "z": 4,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "lines": [
-                            [
-                                "You",
-                                "only",
-                                "have",
-                                "0.990.2",
-                                "-",
-                                "you",
-                                "should",
-                                "update",
-                                "to",
-                                "0.9880!"
-                            ]
-                        ]
-                    }
-                ],
-                [
-                    "textblock",
-                    [
-                        "Press ESC for options"
-                    ],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "color": [
-                            255,
-                            255,
-                            255
-                        ],
-                        "spd": 6,
-                        "pri": 0,
-                        "pos": [
-                            20,
-                            0
-                        ],
-                        "loopmode": 0,
-                        "id_name": "help",
-                        "start": 0,
-                        "text": "Press ESC for options",
-                        "loops": 0,
-                        "x": 0,
-                        "z": 4,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "lines": [
-                            [
-                                "Press",
-                                "ESC",
-                                "for",
-                                "options"
-                            ]
-                        ]
-                    }
-                ],
-                [
-                    "textblock",
-                    [
-                        "0.988 out with android support!"
-                    ],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "color": [
-                            255,
-                            170,
-                            141
-                        ],
-                        "spd": 6,
-                        "pri": 0,
-                        "pos": [
-                            116.01999999999914,
-                            152.0
-                        ],
-                        "loopmode": 0,
-                        "id_name": "txt",
-                        "start": 0,
-                        "text": "0.988 out with android support!",
-                        "loops": 0,
-                        "x": 0,
-                        "z": 4,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "lines": [
-                            [
-                                "0.988",
-                                "out",
-                                "with",
-                                "android",
-                                "support!"
-                            ]
-                        ]
-                    }
-                ],
-                [
-                    "scroll",
-                    [],
-                    {
-                        "filter": null,
-                        "amtx": 106.01999999999926,
-                        "amty": 0.0,
-                        "id_name": "_effect_",
-                        "dz": 0,
-                        "dx": -1,
-                        "dy": 0,
-                        "speed": 1,
-                        "ob_ids": [
-                            "txt"
-                        ],
-                        "wait": 0
-                    }
-                ],
-                [
-                    "timer",
-                    [],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "ticks": 420.02000000000129,
-                        "pri": -1000,
-                        "pos": [
-                            0,
-                            0
-                        ],
-                        "loopmode": 0,
-                        "start": 0,
-                        "run": "rand_text",
-                        "loops": 0,
-                        "x": 0,
-                        "z": null,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                ],
-                [
-                    "guiWait",
-                    [],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "pri": 81,
-                        "pos": [
-                            0,
-                            0
-                        ],
-                        "loopmode": 0,
-                        "id_name": "_guiWait_",
-                        "start": 0,
-                        "run": "",
-                        "loops": 0,
-                        "x": 0,
-                        "z": 0,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                ]
-            ],
-            "_parent_index": 0,
-            "viewed": {}
-        },
-        [
-            "stack",
-            1
-        ]
-    ],
-    [
-        "assets.Script",
-        [],
-        {
-            "_world_id": 112926192,
-            "statement": "",
-            "pri": 0,
-            "scene": "intro",
-            "cross": null,
-            "si": 26,
-            "lastline": 22,
-            "instatement": false,
-            "_objects": [
-                [
-                    "bg",
-                    [],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "name": "bg/mainlol",
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "invert": 0,
-                        "greyscale": 0,
-                        "pri": 0,
-                        "pos": [
-                            0,
-                            192
-                        ],
-                        "loopmode": 0,
-                        "id_name": "mainlol",
-                        "start": 0,
-                        "tint": null,
-                        "fade": 255,
-                        "loops": false,
-                        "x": 0,
-                        "z": 1,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                ],
-                [
-                    "bg",
-                    [],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "name": "bg/CWPage",
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "invert": 0,
-                        "greyscale": 0,
-                        "pri": 0,
-                        "pos": [
-                            0,
-                            0
-                        ],
-                        "loopmode": 0,
-                        "id_name": "CWPage",
-                        "start": 0,
-                        "tint": null,
-                        "fade": 255,
-                        "loops": false,
-                        "x": 0,
-                        "z": 1,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                ],
-                [
-                    "bg",
-                    [],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "name": "bg/mainlol",
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "invert": 0,
-                        "greyscale": 0,
-                        "pri": 0,
-                        "pos": [
-                            0,
-                            192
-                        ],
-                        "loopmode": 0,
-                        "id_name": "mainlol",
-                        "start": 0,
-                        "tint": null,
-                        "fade": 255,
-                        "loops": false,
-                        "x": 0,
-                        "z": 1,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                ],
-                [
-                    "button",
-                    [],
-                    {
-                        "rpos": [
-                            34,
-                            200
-                        ],
-                        "s_graphic": "general/titmenu/play",
-                        "s_text": "play z=5",
-                        "pri": 0,
-                        "id_name": "sg",
-                        "screen_setting": "",
-                        "s_macroname": "start",
-                        "hold_func": null,
-                        "z": 5
-                    }
-                ],
-                [
-                    "button",
-                    [],
-                    {
-                        "rpos": [
-                            34,
-                            237
-                        ],
-                        "s_graphic": "general/titmenu/cwarning",
-                        "s_text": "warning z=5",
-                        "pri": 0,
-                        "id_name": "cw",
-                        "screen_setting": "",
-                        "s_macroname": "warning",
-                        "hold_func": null,
-                        "z": 5
-                    }
-                ],
-                [
-                    "button",
-                    [],
-                    {
-                        "rpos": [
-                            34,
-                            274
-                        ],
-                        "s_graphic": "general/titmenu/fanart",
-                        "s_text": "fanart z=5",
-                        "pri": 0,
-                        "id_name": "fanart",
-                        "screen_setting": "",
-                        "s_macroname": "fanart",
-                        "hold_func": null,
-                        "z": 5
-                    }
-                ],
-                [
-                    "button",
-                    [],
-                    {
-                        "rpos": [
-                            34,
-                            310
-                        ],
-                        "s_graphic": "general/titmenu/options",
-                        "s_text": "options z=5",
-                        "pri": 0,
-                        "id_name": "opt",
-                        "screen_setting": "",
-                        "s_macroname": "options",
-                        "hold_func": null,
-                        "z": 5
-                    }
-                ],
-                [
-                    "button",
-                    [],
-                    {
-                        "rpos": [
-                            34,
-                            346
-                        ],
-                        "s_graphic": "general/titmenu/credits_grey",
-                        "s_text": "options z=5",
-                        "pri": 0,
-                        "id_name": "credits1",
-                        "screen_setting": "",
-                        "s_macroname": "credits1",
-                        "hold_func": null,
-                        "z": 5
-                    }
-                ],
-                [
-                    "guiWait",
-                    [],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "pri": 81,
-                        "pos": [
-                            0,
-                            0
-                        ],
-                        "loopmode": 0,
-                        "id_name": "_guiWait_",
-                        "start": 0,
-                        "run": "",
-                        "loops": 0,
-                        "x": 0,
-                        "z": 0,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                ],
-                [
-                    "guiWait",
-                    [],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "pri": -1000,
-                        "pos": [
-                            0,
-                            0
-                        ],
-                        "loopmode": 0,
-                        "id_name": "_guiWait_",
-                        "start": 0,
-                        "run": null,
-                        "loops": 0,
-                        "x": 0,
-                        "z": 0,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                ]
-            ],
-            "viewed": {}
-        },
-        [
-            "stack",
-            2
-        ]
-    ],
-    [
-        "assets.Script",
-        [],
-        {
-            "_world_id": 118655656,
+            "_world_id": 127813352,
             "statement": "",
             "pri": 0,
             "scene": "sceneminigame",
             "cross": null,
-            "si": 762,
-            "lastline": 698,
+            "si": 1795,
+            "lastline": 1532,
             "instatement": false,
             "_objects": [
                 [
@@ -1230,7 +371,7 @@
                         "tint": null,
                         "fade": 255,
                         "loops": 1,
-                        "x": 136,
+                        "x": 48,
                         "z": 1,
                         "rot": [
                             0,
@@ -1311,46 +452,6 @@
                     }
                 ],
                 [
-                    "uglyarrow",
-                    [],
-                    {
-                        "pri": -1000,
-                        "pos": [
-                            0,
-                            192
-                        ],
-                        "height": 192,
-                        "high": false,
-                        "loops": 1,
-                        "spd": 6,
-                        "screen_setting": "",
-                        "end": null,
-                        "width": 256,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "invert": 0,
-                        "loopmode": 0,
-                        "start": 0,
-                        "fade": 255,
-                        "greyscale": 0,
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "id_name": "_uglyarrow_",
-                        "tint": null,
-                        "showleft": false,
-                        "_tb": true,
-                        "dim": 1,
-                        "name": "bg/locationselectbg",
-                        "x": 0,
-                        "z": 0
-                    }
-                ],
-                [
                     "bg",
                     [],
                     {
@@ -1376,7 +477,7 @@
                         "tint": null,
                         "fade": 255,
                         "loops": 1,
-                        "x": 13,
+                        "x": 32,
                         "z": 1,
                         "rot": [
                             0,
@@ -1419,95 +520,6 @@
                             0
                         ],
                         "wait": 0
-                    }
-                ],
-                [
-                    "fg",
-                    [],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "name": "fg/timeline/p-hallway-l",
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "invert": 0,
-                        "greyscale": 0,
-                        "pri": 0,
-                        "pos": [
-                            0,
-                            192
-                        ],
-                        "loopmode": 0,
-                        "id_name": "timeline/p-hallway-l",
-                        "start": 0,
-                        "tint": null,
-                        "fade": 255,
-                        "loops": false,
-                        "x": 0,
-                        "z": 3,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "wait": 1
-                    }
-                ],
-                [
-                    "fg",
-                    [],
-                    {
-                        "dim": 1,
-                        "screen_setting": "",
-                        "end": null,
-                        "name": "fg/timeline/p-elevator",
-                        "blinkspeed": [
-                            100,
-                            200
-                        ],
-                        "spd": 6,
-                        "invert": 0,
-                        "greyscale": 0,
-                        "pri": 0,
-                        "pos": [
-                            0,
-                            234
-                        ],
-                        "loopmode": 0,
-                        "id_name": "timeline/p-elevator",
-                        "start": 0,
-                        "tint": null,
-                        "fade": 255,
-                        "loops": false,
-                        "x": 0,
-                        "z": 3,
-                        "rot": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "wait": 1
-                    }
-                ],
-                [
-                    "button",
-                    [],
-                    {
-                        "rpos": [
-                            170,
-                            469
-                        ],
-                        "screen_setting": "",
-                        "s_text": "test",
-                        "pri": 0,
-                        "id_name": "p1",
-                        "s_macroname": "{_crbut}",
-                        "hold_func": null,
-                        "z": 5
                     }
                 ],
                 [
@@ -1848,13 +860,11 @@
                     }
                 ]
             ],
-            "viewed": {
-                "games/the-Lighthouse-of-Lunacy/Turnabout-in-the-Lighthouse-of-Lunacysceneminigame3": true
-            }
+            "viewed": {}
         },
         [
             "stack",
-            3
+            0
         ]
     ]
 ]

@@ -1,573 +1,66 @@
-macro location2
-is timelinebutton1 active setlilianinit
-is timelinebutton2 active setcovaingerinit
-is timelinebutton3 active setmarikoinit
-is timelinebutton4 active setb4
-is timelinebutton5 active setb5
-is timelinebutton6 active setb6
-is timelinebutton7 active setb7
-is timelinebutton8 active setb8
-is timelinebutton9 active setb9
-is timelinebutton10 active setb10
-is timelinebutton11 active setb11
-is timelinebutton12 active setb12
-
-label setb4
-set t4location 2
-{endlocation}
-label setb5
-set t5location 2
-{endlocation}
-label setb6
-set t6location 2
-{endlocation}
-label setb7
-set t7location 2
-{endlocation}
-label setb8
-set t8location 2
-{endlocation}
-label setb9
-set t9location 2
-{endlocation}
-label setb10
-set t10location 2
-{endlocation}
-label setb11
-set t11location 2
-{endlocation}
-label setb12
-set t12location 2
-{endlocation}
-label setlilianinit
-set t1location 2
-{endlocation}
-label setcovaingerinit
-set t2location 2
-{endlocation}
-label setmarikoinit
-set t3location 2
+macro location1
+joinvar loc_to_set t $active_button location
+set $loc_to_set 1
 {endlocation}
 endmacro
 
-macro location1
-is timelinebutton1 active setlilianinit
-is timelinebutton2 active setcovaingerinit
-is timelinebutton3 active setmarikoinit
-is timelinebutton4 active setb4
-is timelinebutton5 active setb5
-is timelinebutton6 active setb6
-is timelinebutton7 active setb7
-is timelinebutton8 active setb8
-is timelinebutton9 active setb9
-is timelinebutton10 active setb10
-is timelinebutton11 active setb11
-is timelinebutton12 active setb12
-
-label setb4
-set t4location 1
-{endlocation}
-label setb5
-set t5location 1
-{endlocation}
-label setb6
-set t6location 1
-{endlocation}
-label setb7
-set t7location 1
-{endlocation}
-label setb8
-set t8location 1
-{endlocation}
-label setb9
-set t9location 1
-{endlocation}
-label setb10
-set t10location 1
-{endlocation}
-label setb11
-set t11location 1
-{endlocation}
-label setb12
-set t12location 1
-{endlocation}
-label setlilianinit
-set t1location 1
-{endlocation}
-label setcovaingerinit
-set t2location 1
-{endlocation}
-label setmarikoinit
-set t3location 1
+macro location2
+joinvar loc_to_set t $active_button location
+set $loc_to_set 2
 {endlocation}
 endmacro
 
 macro location3
-is timelinebutton1 active setlilianinit
-is timelinebutton2 active setcovaingerinit
-is timelinebutton3 active setmarikoinit
-is timelinebutton4 active setb4
-is timelinebutton5 active setb5
-is timelinebutton6 active setb6
-is timelinebutton7 active setb7
-is timelinebutton8 active setb8
-is timelinebutton9 active setb9
-is timelinebutton10 active setb10
-is timelinebutton11 active setb11
-is timelinebutton12 active setb12
-
-label setb4
-set t4location 3
-{endlocation}
-label setb5
-set t5location 3
-{endlocation}
-label setb6
-set t6location 3
-{endlocation}
-label setb7
-set t7location 3
-{endlocation}
-label setb8
-set t8location 3
-{endlocation}
-label setb9
-set t9location 3
-{endlocation}
-label setb10
-set t10location 3
-{endlocation}
-label setb11
-set t11location 3
-{endlocation}
-label setb12
-set t12location 3
-{endlocation}
-label setlilianinit
-set t1location 3
-{endlocation}
-label setcovaingerinit
-set t2location 3
-{endlocation}
-label setmarikoinit
-set t3location 3
+joinvar loc_to_set t $active_button location
+set $loc_to_set 3
 {endlocation}
 endmacro
 
 macro location4
-is timelinebutton1 active setlilianinit
-is timelinebutton2 active setcovaingerinit
-is timelinebutton3 active setmarikoinit
-is timelinebutton4 active setb4
-is timelinebutton5 active setb5
-is timelinebutton6 active setb6
-is timelinebutton7 active setb7
-is timelinebutton8 active setb8
-is timelinebutton9 active setb9
-is timelinebutton10 active setb10
-is timelinebutton11 active setb11
-is timelinebutton12 active setb12
-
-label setb4
-set t4location 4
-{endlocation}
-label setb5
-set t5location 4
-{endlocation}
-label setb6
-set t6location 4
-{endlocation}
-label setb7
-set t7location 4
-{endlocation}
-label setb8
-set t8location 4
-{endlocation}
-label setb9
-set t9location 4
-{endlocation}
-label setb10
-set t10location 4
-{endlocation}
-label setb11
-set t11location 4
-{endlocation}
-label setb12
-set t12location 4
-{endlocation}
-label setlilianinit
-set t1location 4
-{endlocation}
-label setcovaingerinit
-set t2location 4
-{endlocation}
-label setmarikoinit
-set t3location 4
+joinvar loc_to_set t $active_button location
+set $loc_to_set 4
 {endlocation}
 endmacro
 
 macro location5
-is timelinebutton1 active setlilianinit
-is timelinebutton2 active setcovaingerinit
-is timelinebutton3 active setmarikoinit
-is timelinebutton4 active setb4
-is timelinebutton5 active setb5
-is timelinebutton6 active setb6
-is timelinebutton7 active setb7
-is timelinebutton8 active setb8
-is timelinebutton9 active setb9
-is timelinebutton10 active setb10
-is timelinebutton11 active setb11
-is timelinebutton12 active setb12
-
-label setb4
-set t4location 5
-{endlocation}
-label setb5
-set t5location 5
-{endlocation}
-label setb6
-set t6location 5
-{endlocation}
-label setb7
-set t7location 5
-{endlocation}
-label setb8
-set t8location 5
-{endlocation}
-label setb9
-set t9location 5
-{endlocation}
-label setb10
-set t10location 5
-{endlocation}
-label setb11
-set t11location 5
-{endlocation}
-label setb12
-set t12location 5
-{endlocation}
-label setlilianinit
-set t1location 5
-{endlocation}
-label setcovaingerinit
-set t2location 5
-{endlocation}
-label setmarikoinit
-set t3location 5
+joinvar loc_to_set t $active_button location
+set $loc_to_set 5
 {endlocation}
 endmacro
 
 macro location6
-is timelinebutton1 active setlilianinit
-is timelinebutton2 active setcovaingerinit
-is timelinebutton3 active setmarikoinit
-is timelinebutton4 active setb4
-is timelinebutton5 active setb5
-is timelinebutton6 active setb6
-is timelinebutton7 active setb7
-is timelinebutton8 active setb8
-is timelinebutton9 active setb9
-is timelinebutton10 active setb10
-is timelinebutton11 active setb11
-is timelinebutton12 active setb12
-
-label setb4
-set t4location 6
-{endlocation}
-label setb5
-set t5location 6
-{endlocation}
-label setb6
-set t6location 6
-{endlocation}
-label setb7
-set t7location 6
-{endlocation}
-label setb8
-set t8location 6
-{endlocation}
-label setb9
-set t9location 6
-{endlocation}
-label setb10
-set t10location 6
-{endlocation}
-label setb11
-set t11location 6
-{endlocation}
-label setb12
-set t12location 6
-{endlocation}
-label setlilianinit
-set t1location 6
-{endlocation}
-label setcovaingerinit
-set t2location 6
-{endlocation}
-label setmarikoinit
-set t3location 6
+joinvar loc_to_set t $active_button location
+set $loc_to_set 6
 {endlocation}
 endmacro
 
 macro location7
-is timelinebutton1 active setlilianinit
-is timelinebutton2 active setcovaingerinit
-is timelinebutton3 active setmarikoinit
-is timelinebutton4 active setb4
-is timelinebutton5 active setb5
-is timelinebutton6 active setb6
-is timelinebutton7 active setb7
-is timelinebutton8 active setb8
-is timelinebutton9 active setb9
-is timelinebutton10 active setb10
-is timelinebutton11 active setb11
-is timelinebutton12 active setb12
-
-label setb4
-set t4location 7
-{endlocation}
-label setb5
-set t5location 7
-{endlocation}
-label setb6
-set t6location 7
-{endlocation}
-label setb7
-set t7location 7
-{endlocation}
-label setb8
-set t8location 7
-{endlocation}
-label setb9
-set t9location 7
-{endlocation}
-label setb10
-set t10location 7
-{endlocation}
-label setb11
-set t11location 7
-{endlocation}
-label setb12
-set t12location 7
-{endlocation}
-label setlilianinit
-set t1location 7
-{endlocation}
-label setcovaingerinit
-set t2location 7
-{endlocation}
-label setmarikoinit
-set t3location 7
+joinvar loc_to_set t $active_button location
+set $loc_to_set 7
 {endlocation}
 endmacro
 
 macro location8
-is timelinebutton1 active setlilianinit
-is timelinebutton2 active setcovaingerinit
-is timelinebutton3 active setmarikoinit
-is timelinebutton4 active setb4
-is timelinebutton5 active setb5
-is timelinebutton6 active setb6
-is timelinebutton7 active setb7
-is timelinebutton8 active setb8
-is timelinebutton9 active setb9
-is timelinebutton10 active setb10
-is timelinebutton11 active setb11
-is timelinebutton12 active setb12
-
-label setb4
-set t4location 8
-{endlocation}
-label setb5
-set t5location 8
-{endlocation}
-label setb6
-set t6location 8
-{endlocation}
-label setb7
-set t7location 8
-{endlocation}
-label setb8
-set t8location 8
-{endlocation}
-label setb9
-set t4location 8
-{endlocation}
-label setb10
-set t10location 8
-{endlocation}
-label setb11
-set t11location 8
-{endlocation}
-label setb12
-set t12location 8
-{endlocation}
-label setlilianinit
-set t1location 8
-{endlocation}
-label setcovaingerinit
-set t2location 8
-{endlocation}
-label setmarikoinit
-set t3location 8
+joinvar loc_to_set t $active_button location
+set $loc_to_set 8
 {endlocation}
 endmacro
 
 macro location9
-is timelinebutton1 active setlilianinit
-is timelinebutton2 active setcovaingerinit
-is timelinebutton3 active setmarikoinit
-is timelinebutton4 active setb4
-is timelinebutton5 active setb5
-is timelinebutton6 active setb6
-is timelinebutton7 active setb7
-is timelinebutton8 active setb8
-is timelinebutton9 active setb9
-is timelinebutton10 active setb10
-is timelinebutton11 active setb11
-is timelinebutton12 active setb12
-
-label setb4
-set t4location 9
-{endlocation}
-label setb5
-set t5location 9
-{endlocation}
-label setb6
-set t6location 9
-{endlocation}
-label setb7
-set t7location 9
-{endlocation}
-label setb8
-set t8location 9
-{endlocation}
-label setb9
-set t9location 9
-{endlocation}
-label setb10
-set t10location 9
-{endlocation}
-label setb11
-set t11location 9
-{endlocation}
-label setb12
-set t12location 9
-{endlocation}
-label setlilianinit
-set t1location 9
-{endlocation}
-label setcovaingerinit
-set t2location 9
-{endlocation}
-label setmarikoinit
-set t3location 9
+joinvar loc_to_set t $active_button location
+set $loc_to_set 9
 {endlocation}
 endmacro
 
 macro location10
-is timelinebutton1 active setlilianinit
-is timelinebutton2 active setcovaingerinit
-is timelinebutton3 active setmarikoinit
-is timelinebutton4 active setb4
-is timelinebutton5 active setb5
-is timelinebutton6 active setb6
-is timelinebutton7 active setb7
-is timelinebutton8 active setb8
-is timelinebutton9 active setb9
-is timelinebutton10 active setb10
-is timelinebutton11 active setb11
-is timelinebutton12 active setb12
-
-label setb4
-set t4location 10
-{endlocation}
-label setb5
-set t5location 10
-{endlocation}
-label setb6
-set t6location 10
-{endlocation}
-label setb7
-set t7location 10
-{endlocation}
-label setb8
-set t8location 10
-{endlocation}
-label setb9
-set t9location 10
-{endlocation}
-label setb10
-set t10location 10
-{endlocation}
-label setb11
-set t11location 10
-{endlocation}
-label setb12
-set t12location 10
-{endlocation}
-label setlilianinit
-set t1location 10
-{endlocation}
-label setcovaingerinit
-set t2location 10
-{endlocation}
-label setmarikoinit
-set t3location 10
+joinvar loc_to_set t $active_button location
+set $loc_to_set 10
 {endlocation}
 endmacro
 
 macro location11
-is timelinebutton1 active setlilianinit
-is timelinebutton2 active setcovaingerinit
-is timelinebutton3 active setmarikoinit
-is timelinebutton4 active setb4
-is timelinebutton5 active setb5
-is timelinebutton6 active setb6
-is timelinebutton7 active setb7
-is timelinebutton8 active setb8
-is timelinebutton9 active setb9
-is timelinebutton10 active setb10
-is timelinebutton11 active setb11
-is timelinebutton12 active setb12
-is timelinebutton12 active setb12
-
-label setb4
-set t4location 11
-{endlocation}
-label setb5
-set t5location 11
-{endlocation}
-label setb6
-set t6location 11
-{endlocation}
-label setb7
-set t7location 11
-{endlocation}
-label setb8
-set t8location 11
-{endlocation}
-label setb9
-set t9location 11
-{endlocation}
-label setb10
-set t10location 11
-{endlocation}
-label setb11
-set t11location 11
-{endlocation}
-label setb12
-set t12location 11
-{endlocation}
-label setlilianinit
-set t1location 11
-{endlocation}
-label setcovaingerinit
-set t2location 11
-{endlocation}
-label setmarikoinit
-set t3location 11
+joinvar loc_to_set t $active_button location
+set $loc_to_set 11
 {endlocation}
 endmacro
 
@@ -587,7 +80,7 @@ set timelinebutton10 inactive
 set timelinebutton11 inactive
 set timelinebutton12 inactive
 setflag endinglocation
-script sceneminigame
+setflag scriptreset
 endmacro
 
 macro createmap
@@ -661,7 +154,8 @@ is timeline7 lilian wpht7
 is timeline6 lilian wpht6
 is timeline5 lilian wpht5
 is timeline4 lilian wpht4
-goto wpht1
+is timeline1 lilian wpht1
+goto end
 
 label wpht12
 is t12location 1?
@@ -864,27 +358,27 @@ fg timeline/mapl10 y=192
 goto end
 
 label wpht4
-is t4alocation 1?
+is t4location 1?
 fg timeline/mapl2 y=192
-is t4alocation 2?
+is t4location 2?
 fg timeline/mapl8 y=192
-is t4alocation 3?
+is t4location 3?
 fg timeline/mapl4 y=192
-is t4alocation 4?
+is t4location 4?
 fg timeline/mapl11 y=192
-is t4alocation 5?
+is t4location 5?
 fg timeline/mapl5 y=192
-is t4alocation 6?
+is t4location 6?
 fg timeline/mapl9 y=192
-is t4alocation 7?
+is t4location 7?
 fg timeline/mapl1 y=192
-is t4alocation 8?
+is t4location 8?
 fg timeline/mapl6 y=192
-is t4alocation 9?
+is t4location 9?
 fg timeline/mapl7 y=192
-is t4alocation 10?
+is t4location 10?
 fg timeline/mapl3 y=192
-is t4alocation 11?
+is t4location 11?
 fg timeline/mapl10 y=192
 goto end
 
@@ -911,9 +405,1038 @@ is t1location 10?
 fg timeline/mapl3 y=192
 is t1location 11?
 fg timeline/mapl10 y=192
-goto end
 
 label end
+
+label placecova
+is timeline12 cova wcht12
+is timeline11 cova wcht11
+is timeline10 cova wcht10
+is timeline9 cova wcht9
+is timeline8 cova wcht8
+is timeline7 cova wcht7
+is timeline6 cova wcht6
+is timeline5 cova wcht5
+is timeline4 cova wcht4
+is timeline2 cova wcht1
+goto end1
+
+label wcht12
+is t12location 1?
+fg timeline/mapc2 y=192
+is t12location 2?
+fg timeline/mapc8 y=192
+is t12location 3?
+fg timeline/mapc4 y=192
+is t12location 4?
+fg timeline/mapc11 y=192
+is t12location 5?
+fg timeline/mapc5 y=192
+is t12location 6?
+fg timeline/mapc9 y=192
+is t12location 7?
+fg timeline/mapc1 y=192
+is t12location 8?
+fg timeline/mapc6 y=192
+is t12location 9?
+fg timeline/mapc7 y=192
+is t12location 10?
+fg timeline/mapc3 y=192
+is t12location 11?
+fg timeline/mapc10 y=192
+goto end1
+
+label wcht11
+is t11location 1?
+fg timeline/mapc2 y=192
+is t11location 2?
+fg timeline/mapc8 y=192
+is t11location 3?
+fg timeline/mapc4 y=192
+is t11location 4?
+fg timeline/mapc11 y=192
+is t11location 5?
+fg timeline/mapc5 y=192
+is t11location 6?
+fg timeline/mapc9 y=192
+is t11location 7?
+fg timeline/mapc1 y=192
+is t11location 8?
+fg timeline/mapc6 y=192
+is t11location 9?
+fg timeline/mapc7 y=192
+is t11location 10?
+fg timeline/mapc3 y=192
+is t11location 11?
+fg timeline/mapc10 y=192
+goto end1
+
+label wcht10
+is t10location 1?
+fg timeline/mapc2 y=192
+is t10location 2?
+fg timeline/mapc8 y=192
+is t10location 3?
+fg timeline/mapc4 y=192
+is t10location 4?
+fg timeline/mapc11 y=192
+is t10location 5?
+fg timeline/mapc5 y=192
+is t10location 6?
+fg timeline/mapc9 y=192
+is t10location 7?
+fg timeline/mapc1 y=192
+is t10location 8?
+fg timeline/mapc6 y=192
+is t10location 9?
+fg timeline/mapc7 y=192
+is t10location 10?
+fg timeline/mapc3 y=192
+is t10location 11?
+fg timeline/mapc10 y=192
+goto end1
+
+label wcht9
+is t9location 1?
+fg timeline/mapc2 y=192
+is t9location 2?
+fg timeline/mapc8 y=192
+is t9location 3?
+fg timeline/mapc4 y=192
+is t9location 4?
+fg timeline/mapc11 y=192
+is t9location 5?
+fg timeline/mapc5 y=192
+is t9location 6?
+fg timeline/mapc9 y=192
+is t9location 7?
+fg timeline/mapc1 y=192
+is t9location 8?
+fg timeline/mapc6 y=192
+is t9location 9?
+fg timeline/mapc7 y=192
+is t9location 10?
+fg timeline/mapc3 y=192
+is t9location 11?
+fg timeline/mapc10 y=192
+goto end1
+
+label wcht8
+is t8location 1?
+fg timeline/mapc2 y=192
+is t8location 2?
+fg timeline/mapc8 y=192
+is t8location 3?
+fg timeline/mapc4 y=192
+is t8location 4?
+fg timeline/mapc11 y=192
+is t8location 5?
+fg timeline/mapc5 y=192
+is t8location 6?
+fg timeline/mapc9 y=192
+is t8location 7?
+fg timeline/mapc1 y=192
+is t8location 8?
+fg timeline/mapc6 y=192
+is t8location 9?
+fg timeline/mapc7 y=192
+is t8location 10?
+fg timeline/mapc3 y=192
+is t8location 11?
+fg timeline/mapc10 y=192
+goto end1
+
+label wcht7
+is t7location 1?
+fg timeline/mapc2 y=192
+is t7location 2?
+fg timeline/mapc8 y=192
+is t7location 3?
+fg timeline/mapc4 y=192
+is t7location 4?
+fg timeline/mapc11 y=192
+is t7location 5?
+fg timeline/mapc5 y=192
+is t7location 6?
+fg timeline/mapc9 y=192
+is t7location 7?
+fg timeline/mapc1 y=192
+is t7location 8?
+fg timeline/mapc6 y=192
+is t7location 9?
+fg timeline/mapc7 y=192
+is t7location 10?
+fg timeline/mapc3 y=192
+is t7location 11?
+fg timeline/mapc10 y=192
+goto end1
+
+label wcht6
+is t6location 1?
+fg timeline/mapc2 y=192
+is t6location 2?
+fg timeline/mapc8 y=192
+is t6location 3?
+fg timeline/mapc4 y=192
+is t6location 4?
+fg timeline/mapc11 y=192
+is t6location 5?
+fg timeline/mapc5 y=192
+is t6location 6?
+fg timeline/mapc9 y=192
+is t6location 7?
+fg timeline/mapc1 y=192
+is t6location 8?
+fg timeline/mapc6 y=192
+is t6location 9?
+fg timeline/mapc7 y=192
+is t6location 10?
+fg timeline/mapc3 y=192
+is t6location 11?
+fg timeline/mapc10 y=192
+goto end1
+
+label wcht5
+is t5location 1?
+fg timeline/mapc2 y=192
+is t5location 2?
+fg timeline/mapc8 y=192
+is t5location 3?
+fg timeline/mapc4 y=192
+is t5location 4?
+fg timeline/mapc11 y=192
+is t5location 5?
+fg timeline/mapc5 y=192
+is t5location 6?
+fg timeline/mapc9 y=192
+is t5location 7?
+fg timeline/mapc1 y=192
+is t5location 8?
+fg timeline/mapc6 y=192
+is t5location 9?
+fg timeline/mapc7 y=192
+is t5location 10?
+fg timeline/mapc3 y=192
+is t5location 11?
+fg timeline/mapc10 y=192
+goto end1
+
+label wcht4
+is t4location 1?
+fg timeline/mapc2 y=192
+is t4location 2?
+fg timeline/mapc8 y=192
+is t4location 3?
+fg timeline/mapc4 y=192
+is t4location 4?
+fg timeline/mapc11 y=192
+is t4location 5?
+fg timeline/mapc5 y=192
+is t4location 6?
+fg timeline/mapc9 y=192
+is t4location 7?
+fg timeline/mapc1 y=192
+is t4location 8?
+fg timeline/mapc6 y=192
+is t4location 9?
+fg timeline/mapc7 y=192
+is t4location 10?
+fg timeline/mapc3 y=192
+is t4location 11?
+fg timeline/mapc10 y=192
+goto end1
+
+label wcht1
+is t2location 1?
+fg timeline/mapc2 y=192
+is t2location 2?
+fg timeline/mapc8 y=192
+is t2location 3?
+fg timeline/mapc4 y=192
+is t2location 4?
+fg timeline/mapc11 y=192
+is t2location 5?
+fg timeline/mapc5 y=192
+is t2location 6?
+fg timeline/mapc9 y=192
+is t2location 7?
+fg timeline/mapc1 y=192
+is t2location 8?
+fg timeline/mapc6 y=192
+is t2location 9?
+fg timeline/mapc7 y=192
+is t2location 10?
+fg timeline/mapc3 y=192
+is t2location 11?
+fg timeline/mapc10 y=192
+is t2location 1?
+fg timeline/maph2 y=192
+is t2location 2?
+fg timeline/maph8 y=192
+is t2location 3?
+fg timeline/maph4 y=192
+is t2location 4?
+fg timeline/maph11 y=192
+is t2location 5?
+fg timeline/maph5 y=192
+is t2location 6?
+fg timeline/maph9 y=192
+is t2location 7?
+fg timeline/maph1 y=192
+is t2location 8?
+fg timeline/maph6 y=192
+is t2location 9?
+fg timeline/maph7 y=192
+is t2location 10?
+fg timeline/maph3 y=192
+is t2location 11?
+fg timeline/mapc10 y=192
+goto end1
+
+label end1
+
+label placehell
+is timeline12 hellinger whht12
+is timeline11 hellinger whht11
+is timeline10 hellinger whht10
+is timeline9 hellinger whht9
+is timeline8 hellinger whht8
+is timeline7 hellinger whht7
+is timeline6 hellinger whht6
+is timeline5 hellinger whht5
+is timeline4 hellinger whht4
+goto end2
+
+label whht12
+is t12location 1?
+fg timeline/maph2 y=192
+is t12location 2?
+fg timeline/maph8 y=192
+is t12location 3?
+fg timeline/maph4 y=192
+is t12location 4?
+fg timeline/maph11 y=192
+is t12location 5?
+fg timeline/maph5 y=192
+is t12location 6?
+fg timeline/maph9 y=192
+is t12location 7?
+fg timeline/maph1 y=192
+is t12location 8?
+fg timeline/maph6 y=192
+is t12location 9?
+fg timeline/maph7 y=192
+is t12location 10?
+fg timeline/maph3 y=192
+is t12location 11?
+fg timeline/maph10 y=192
+goto end2
+
+label whht11
+is t11location 1?
+fg timeline/maph2 y=192
+is t11location 2?
+fg timeline/maph8 y=192
+is t11location 3?
+fg timeline/maph4 y=192
+is t11location 4?
+fg timeline/maph11 y=192
+is t11location 5?
+fg timeline/maph5 y=192
+is t11location 6?
+fg timeline/maph9 y=192
+is t11location 7?
+fg timeline/maph1 y=192
+is t11location 8?
+fg timeline/maph6 y=192
+is t11location 9?
+fg timeline/maph7 y=192
+is t11location 10?
+fg timeline/maph3 y=192
+is t11location 11?
+fg timeline/maph10 y=192
+goto end2
+
+label whht10
+is t10location 1?
+fg timeline/maph2 y=192
+is t10location 2?
+fg timeline/maph8 y=192
+is t10location 3?
+fg timeline/maph4 y=192
+is t10location 4?
+fg timeline/maph11 y=192
+is t10location 5?
+fg timeline/maph5 y=192
+is t10location 6?
+fg timeline/maph9 y=192
+is t10location 7?
+fg timeline/maph1 y=192
+is t10location 8?
+fg timeline/maph6 y=192
+is t10location 9?
+fg timeline/maph7 y=192
+is t10location 10?
+fg timeline/maph3 y=192
+is t10location 11?
+fg timeline/maph10 y=192
+goto end2
+
+label whht9
+is t9location 1?
+fg timeline/maph2 y=192
+is t9location 2?
+fg timeline/maph8 y=192
+is t9location 3?
+fg timeline/maph4 y=192
+is t9location 4?
+fg timeline/maph11 y=192
+is t9location 5?
+fg timeline/maph5 y=192
+is t9location 6?
+fg timeline/maph9 y=192
+is t9location 7?
+fg timeline/maph1 y=192
+is t9location 8?
+fg timeline/maph6 y=192
+is t9location 9?
+fg timeline/maph7 y=192
+is t9location 10?
+fg timeline/maph3 y=192
+is t9location 11?
+fg timeline/maph10 y=192
+goto end2
+
+label whht8
+is t8location 1?
+fg timeline/maph2 y=192
+is t8location 2?
+fg timeline/maph8 y=192
+is t8location 3?
+fg timeline/maph4 y=192
+is t8location 4?
+fg timeline/maph11 y=192
+is t8location 5?
+fg timeline/maph5 y=192
+is t8location 6?
+fg timeline/maph9 y=192
+is t8location 7?
+fg timeline/maph1 y=192
+is t8location 8?
+fg timeline/maph6 y=192
+is t8location 9?
+fg timeline/maph7 y=192
+is t8location 10?
+fg timeline/maph3 y=192
+is t8location 11?
+fg timeline/maph10 y=192
+goto end2
+
+label whht7
+is t7location 1?
+fg timeline/maph2 y=192
+is t7location 2?
+fg timeline/maph8 y=192
+is t7location 3?
+fg timeline/maph4 y=192
+is t7location 4?
+fg timeline/maph11 y=192
+is t7location 5?
+fg timeline/maph5 y=192
+is t7location 6?
+fg timeline/maph9 y=192
+is t7location 7?
+fg timeline/maph1 y=192
+is t7location 8?
+fg timeline/maph6 y=192
+is t7location 9?
+fg timeline/maph7 y=192
+is t7location 10?
+fg timeline/maph3 y=192
+is t7location 11?
+fg timeline/maph10 y=192
+goto end2
+
+label whht6
+is t6location 1?
+fg timeline/maph2 y=192
+is t6location 2?
+fg timeline/maph8 y=192
+is t6location 3?
+fg timeline/maph4 y=192
+is t6location 4?
+fg timeline/maph11 y=192
+is t6location 5?
+fg timeline/maph5 y=192
+is t6location 6?
+fg timeline/maph9 y=192
+is t6location 7?
+fg timeline/maph1 y=192
+is t6location 8?
+fg timeline/maph6 y=192
+is t6location 9?
+fg timeline/maph7 y=192
+is t6location 10?
+fg timeline/maph3 y=192
+is t6location 11?
+fg timeline/maph10 y=192
+goto end2
+
+label whht5
+is t5location 1?
+fg timeline/maph2 y=192
+is t5location 2?
+fg timeline/maph8 y=192
+is t5location 3?
+fg timeline/maph4 y=192
+is t5location 4?
+fg timeline/maph11 y=192
+is t5location 5?
+fg timeline/maph5 y=192
+is t5location 6?
+fg timeline/maph9 y=192
+is t5location 7?
+fg timeline/maph1 y=192
+is t5location 8?
+fg timeline/maph6 y=192
+is t5location 9?
+fg timeline/maph7 y=192
+is t5location 10?
+fg timeline/maph3 y=192
+is t5location 11?
+fg timeline/maph10 y=192
+goto end2
+
+label whht4
+is t4location 1?
+fg timeline/maph2 y=192
+is t4location 2?
+fg timeline/maph8 y=192
+is t4location 3?
+fg timeline/maph4 y=192
+is t4location 4?
+fg timeline/maph11 y=192
+is t4location 5?
+fg timeline/maph5 y=192
+is t4location 6?
+fg timeline/maph9 y=192
+is t4location 7?
+fg timeline/maph1 y=192
+is t4location 8?
+fg timeline/maph6 y=192
+is t4location 9?
+fg timeline/maph7 y=192
+is t4location 10?
+fg timeline/maph3 y=192
+is t4location 11?
+fg timeline/maph10 y=192
+goto end2
+
+label end2
+
+label placemariko
+is timeline12 mariko wmht12
+is timeline11 mariko wmht11
+is timeline10 mariko wmht10
+is timeline9 mariko wmht9
+is timeline8 mariko wmht8
+is timeline7 mariko wmht7
+is timeline6 mariko wmht6
+is timeline5 mariko wmht5
+is timeline4 mariko wmht4
+is timeline3 mariko wmht1
+goto end3
+
+label wmht12
+is t12location 1?
+fg timeline/mapm2 y=192
+is t12location 2?
+fg timeline/mapm8 y=192
+is t12location 3?
+fg timeline/mapm4 y=192
+is t12location 4?
+fg timeline/mapm11 y=192
+is t12location 5?
+fg timeline/mapm5 y=192
+is t12location 6?
+fg timeline/mapm9 y=192
+is t12location 7?
+fg timeline/mapm1 y=192
+is t12location 8?
+fg timeline/mapm6 y=192
+is t12location 9?
+fg timeline/mapm7 y=192
+is t12location 10?
+fg timeline/mapm3 y=192
+is t12location 11?
+fg timeline/mapm10 y=192
+goto end3
+
+label wmht11
+is t11location 1?
+fg timeline/mapm2 y=192
+is t11location 2?
+fg timeline/mapm8 y=192
+is t11location 3?
+fg timeline/mapm4 y=192
+is t11location 4?
+fg timeline/mapm11 y=192
+is t11location 5?
+fg timeline/mapm5 y=192
+is t11location 6?
+fg timeline/mapm9 y=192
+is t11location 7?
+fg timeline/mapm1 y=192
+is t11location 8?
+fg timeline/mapm6 y=192
+is t11location 9?
+fg timeline/mapm7 y=192
+is t11location 10?
+fg timeline/mapm3 y=192
+is t11location 11?
+fg timeline/mapm10 y=192
+goto end3
+
+label wmht10
+is t10location 1?
+fg timeline/mapm2 y=192
+is t10location 2?
+fg timeline/mapm8 y=192
+is t10location 3?
+fg timeline/mapm4 y=192
+is t10location 4?
+fg timeline/mapm11 y=192
+is t10location 5?
+fg timeline/mapm5 y=192
+is t10location 6?
+fg timeline/mapm9 y=192
+is t10location 7?
+fg timeline/mapm1 y=192
+is t10location 8?
+fg timeline/mapm6 y=192
+is t10location 9?
+fg timeline/mapm7 y=192
+is t10location 10?
+fg timeline/mapm3 y=192
+is t10location 11?
+fg timeline/mapm10 y=192
+goto end3
+
+label wmht9
+is t9location 1?
+fg timeline/mapm2 y=192
+is t9location 2?
+fg timeline/mapm8 y=192
+is t9location 3?
+fg timeline/mapm4 y=192
+is t9location 4?
+fg timeline/mapm11 y=192
+is t9location 5?
+fg timeline/mapm5 y=192
+is t9location 6?
+fg timeline/mapm9 y=192
+is t9location 7?
+fg timeline/mapm1 y=192
+is t9location 8?
+fg timeline/mapm6 y=192
+is t9location 9?
+fg timeline/mapm7 y=192
+is t9location 10?
+fg timeline/mapm3 y=192
+is t9location 11?
+fg timeline/mapm10 y=192
+goto end3
+
+label wmht8
+is t8location 1?
+fg timeline/mapm2 y=192
+is t8location 2?
+fg timeline/mapm8 y=192
+is t8location 3?
+fg timeline/mapm4 y=192
+is t8location 4?
+fg timeline/mapm11 y=192
+is t8location 5?
+fg timeline/mapm5 y=192
+is t8location 6?
+fg timeline/mapm9 y=192
+is t8location 7?
+fg timeline/mapm1 y=192
+is t8location 8?
+fg timeline/mapm6 y=192
+is t8location 9?
+fg timeline/mapm7 y=192
+is t8location 10?
+fg timeline/mapm3 y=192
+is t8location 11?
+fg timeline/mapm10 y=192
+goto end3
+
+label wmht7
+is t7location 1?
+fg timeline/mapm2 y=192
+is t7location 2?
+fg timeline/mapm8 y=192
+is t7location 3?
+fg timeline/mapm4 y=192
+is t7location 4?
+fg timeline/mapm11 y=192
+is t7location 5?
+fg timeline/mapm5 y=192
+is t7location 6?
+fg timeline/mapm9 y=192
+is t7location 7?
+fg timeline/mapm1 y=192
+is t7location 8?
+fg timeline/mapm6 y=192
+is t7location 9?
+fg timeline/mapm7 y=192
+is t7location 10?
+fg timeline/mapm3 y=192
+is t7location 11?
+fg timeline/mapm10 y=192
+goto end3
+
+label wmht6
+is t6location 1?
+fg timeline/mapm2 y=192
+is t6location 2?
+fg timeline/mapm8 y=192
+is t6location 3?
+fg timeline/mapm4 y=192
+is t6location 4?
+fg timeline/mapm11 y=192
+is t6location 5?
+fg timeline/mapm5 y=192
+is t6location 6?
+fg timeline/mapm9 y=192
+is t6location 7?
+fg timeline/mapm1 y=192
+is t6location 8?
+fg timeline/mapm6 y=192
+is t6location 9?
+fg timeline/mapm7 y=192
+is t6location 10?
+fg timeline/mapm3 y=192
+is t6location 11?
+fg timeline/mapm10 y=192
+goto end3
+
+label wmht5
+is t5location 1?
+fg timeline/mapm2 y=192
+is t5location 2?
+fg timeline/mapm8 y=192
+is t5location 3?
+fg timeline/mapm4 y=192
+is t5location 4?
+fg timeline/mapm11 y=192
+is t5location 5?
+fg timeline/mapm5 y=192
+is t5location 6?
+fg timeline/mapm9 y=192
+is t5location 7?
+fg timeline/mapm1 y=192
+is t5location 8?
+fg timeline/mapm6 y=192
+is t5location 9?
+fg timeline/mapm7 y=192
+is t5location 10?
+fg timeline/mapm3 y=192
+is t5location 11?
+fg timeline/mapm10 y=192
+goto end3
+
+label wmht4
+is t4location 1?
+fg timeline/mapm2 y=192
+is t4location 2?
+fg timeline/mapm8 y=192
+is t4location 3?
+fg timeline/mapm4 y=192
+is t4location 4?
+fg timeline/mapm11 y=192
+is t4location 5?
+fg timeline/mapm5 y=192
+is t4location 6?
+fg timeline/mapm9 y=192
+is t4location 7?
+fg timeline/mapm1 y=192
+is t4location 8?
+fg timeline/mapm6 y=192
+is t4location 9?
+fg timeline/mapm7 y=192
+is t4location 10?
+fg timeline/mapm3 y=192
+is t4location 11?
+fg timeline/mapm10 y=192
+goto end3
+
+label wmht1
+is t3location 1?
+fg timeline/mapm2 y=192
+is t3location 2?
+fg timeline/mapm8 y=192
+is t3location 3?
+fg timeline/mapm4 y=192
+is t3location 4?
+fg timeline/mapm11 y=192
+is t3location 5?
+fg timeline/mapm5 y=192
+is t3location 6?
+fg timeline/mapm9 y=192
+is t3location 7?
+fg timeline/mapm1 y=192
+is t3location 8?
+fg timeline/mapm6 y=192
+is t3location 9?
+fg timeline/mapm7 y=192
+is t3location 10?
+fg timeline/mapm3 y=192
+is t3location 11?
+fg timeline/mapm10 y=192
+goto end3
+
+label end3
+
+label placeculprit
+is timeline12 culprit wxht12
+is timeline11 culprit wxht11
+is timeline10 culprit wxht10
+is timeline9 culprit wxht9
+is timeline8 culprit wxht8
+is timeline7 culprit wxht7
+is timeline6 culprit wxht6
+is timeline5 culprit wxht5
+is timeline4 culprit wxht4
+goto end4
+
+label wxht12
+is t12location 1?
+fg timeline/mapx2 y=192
+is t12location 2?
+fg timeline/mapx8 y=192
+is t12location 3?
+fg timeline/mapx4 y=192
+is t12location 4?
+fg timeline/mapx11 y=192
+is t12location 5?
+fg timeline/mapx5 y=192
+is t12location 6?
+fg timeline/mapx9 y=192
+is t12location 7?
+fg timeline/mapx1 y=192
+is t12location 8?
+fg timeline/mapx6 y=192
+is t12location 9?
+fg timeline/mapx7 y=192
+is t12location 10?
+fg timeline/mapx3 y=192
+is t12location 11?
+fg timeline/mapx10 y=192
+goto end4
+
+label wxht11
+is t11location 1?
+fg timeline/mapx2 y=192
+is t11location 2?
+fg timeline/mapx8 y=192
+is t11location 3?
+fg timeline/mapx4 y=192
+is t11location 4?
+fg timeline/mapx11 y=192
+is t11location 5?
+fg timeline/mapx5 y=192
+is t11location 6?
+fg timeline/mapx9 y=192
+is t11location 7?
+fg timeline/mapx1 y=192
+is t11location 8?
+fg timeline/mapx6 y=192
+is t11location 9?
+fg timeline/mapx7 y=192
+is t11location 10?
+fg timeline/mapx3 y=192
+is t11location 11?
+fg timeline/mapx10 y=192
+goto end4
+
+label wxht10
+is t10location 1?
+fg timeline/mapx2 y=192
+is t10location 2?
+fg timeline/mapx8 y=192
+is t10location 3?
+fg timeline/mapx4 y=192
+is t10location 4?
+fg timeline/mapx11 y=192
+is t10location 5?
+fg timeline/mapx5 y=192
+is t10location 6?
+fg timeline/mapx9 y=192
+is t10location 7?
+fg timeline/mapx1 y=192
+is t10location 8?
+fg timeline/mapx6 y=192
+is t10location 9?
+fg timeline/mapx7 y=192
+is t10location 10?
+fg timeline/mapx3 y=192
+is t10location 11?
+fg timeline/mapx10 y=192
+goto end4
+
+label wxht9
+is t9location 1?
+fg timeline/mapx2 y=192
+is t9location 2?
+fg timeline/mapx8 y=192
+is t9location 3?
+fg timeline/mapx4 y=192
+is t9location 4?
+fg timeline/mapx11 y=192
+is t9location 5?
+fg timeline/mapx5 y=192
+is t9location 6?
+fg timeline/mapx9 y=192
+is t9location 7?
+fg timeline/mapx1 y=192
+is t9location 8?
+fg timeline/mapx6 y=192
+is t9location 9?
+fg timeline/mapx7 y=192
+is t9location 10?
+fg timeline/mapx3 y=192
+is t9location 11?
+fg timeline/mapx10 y=192
+goto end4
+
+label wxht8
+is t8location 1?
+fg timeline/mapx2 y=192
+is t8location 2?
+fg timeline/mapx8 y=192
+is t8location 3?
+fg timeline/mapx4 y=192
+is t8location 4?
+fg timeline/mapx11 y=192
+is t8location 5?
+fg timeline/mapx5 y=192
+is t8location 6?
+fg timeline/mapx9 y=192
+is t8location 7?
+fg timeline/mapx1 y=192
+is t8location 8?
+fg timeline/mapx6 y=192
+is t8location 9?
+fg timeline/mapx7 y=192
+is t8location 10?
+fg timeline/mapx3 y=192
+is t8location 11?
+fg timeline/mapx10 y=192
+goto end4
+
+label wxht7
+is t7location 1?
+fg timeline/mapx2 y=192
+is t7location 2?
+fg timeline/mapx8 y=192
+is t7location 3?
+fg timeline/mapx4 y=192
+is t7location 4?
+fg timeline/mapx11 y=192
+is t7location 5?
+fg timeline/mapx5 y=192
+is t7location 6?
+fg timeline/mapx9 y=192
+is t7location 7?
+fg timeline/mapx1 y=192
+is t7location 8?
+fg timeline/mapx6 y=192
+is t7location 9?
+fg timeline/mapx7 y=192
+is t7location 10?
+fg timeline/mapx3 y=192
+is t7location 11?
+fg timeline/mapx10 y=192
+goto end4
+
+label wxht6
+is t6location 1?
+fg timeline/mapx2 y=192
+is t6location 2?
+fg timeline/mapx8 y=192
+is t6location 3?
+fg timeline/mapx4 y=192
+is t6location 4?
+fg timeline/mapx11 y=192
+is t6location 5?
+fg timeline/mapx5 y=192
+is t6location 6?
+fg timeline/mapx9 y=192
+is t6location 7?
+fg timeline/mapx1 y=192
+is t6location 8?
+fg timeline/mapx6 y=192
+is t6location 9?
+fg timeline/mapx7 y=192
+is t6location 10?
+fg timeline/mapx3 y=192
+is t6location 11?
+fg timeline/mapx10 y=192
+goto end4
+
+label wxht5
+is t5location 1?
+fg timeline/mapx2 y=192
+is t5location 2?
+fg timeline/mapx8 y=192
+is t5location 3?
+fg timeline/mapx4 y=192
+is t5location 4?
+fg timeline/mapx11 y=192
+is t5location 5?
+fg timeline/mapx5 y=192
+is t5location 6?
+fg timeline/mapx9 y=192
+is t5location 7?
+fg timeline/mapx1 y=192
+is t5location 8?
+fg timeline/mapx6 y=192
+is t5location 9?
+fg timeline/mapx7 y=192
+is t5location 10?
+fg timeline/mapx3 y=192
+is t5location 11?
+fg timeline/mapx10 y=192
+goto end4
+
+label wxht4
+is t4location 1?
+fg timeline/mapx2 y=192
+is t4location 2?
+fg timeline/mapx8 y=192
+is t4location 3?
+fg timeline/mapx4 y=192
+is t4location 4?
+fg timeline/mapx11 y=192
+is t4location 5?
+fg timeline/mapx5 y=192
+is t4location 6?
+fg timeline/mapx9 y=192
+is t4location 7?
+fg timeline/mapx1 y=192
+is t4location 8?
+fg timeline/mapx6 y=192
+is t4location 9?
+fg timeline/mapx7 y=192
+is t4location 10?
+fg timeline/mapx3 y=192
+is t4location 11?
+fg timeline/mapx10 y=192
+goto end4
+
+label end4
 endmacro
 
 macro placemarkers
@@ -1304,7 +1827,7 @@ is timeline12 cova?
 obj fg/timelinebuttons/covaarrow x=162 y=347
 is timeline12 culprit?
 obj fg/timelinebuttons/culpritarrow x=162 y=347
-
+setflag scriptreset
 endmacro
 
 macro deleteall
