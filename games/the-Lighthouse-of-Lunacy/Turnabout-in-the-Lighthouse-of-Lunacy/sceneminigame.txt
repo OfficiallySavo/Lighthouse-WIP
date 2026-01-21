@@ -1,58 +1,63 @@
 bg timeline-bg stack
 bg timeline-bg-overlay stack
 fg timeline-overlay-2 nowait
+"{next}"
 set char_aurelia_defsound silence
 flag endinglocation?
 sfx setmove
 noflag pressmusic?
-# pressonourway
+pressonourway
 setflag pressmusic
 set _textbox_bg general/textbox2
 set _bigbutton_bg bg/locationselectbg
 bg locationselectbg y=192 stack
-fg timeline-ui-map-overlay y=192 nowait
-obj fg/timelinebuttons/pewpew x=136 y=260
+fg timeline-ui-map-overlay y=192 nowait name=map
+obj fg/timelinebuttons/pewpew x=136 y=260 name=pewpew
 obj fg/timelinebuttons/list y=192 x=134 name=list
 set _cr_button false
 {createmap}
 {placemarkers}
+{placelilian}
 isempty timeline4?
-obj fg/timelinebuttons/question x=162 y=235
+obj fg/timelinebuttons/question x=162 y=235 name=q1
 isempty timeline5?
-obj fg/timelinebuttons/question x=162 y=249
+obj fg/timelinebuttons/question x=162 y=249 name=q2
 isempty timeline6?
-obj fg/timelinebuttons/question x=162 y=263
+obj fg/timelinebuttons/question x=162 y=263 name=q3
 isempty timeline7?
-obj fg/timelinebuttons/question x=162 y=277
+obj fg/timelinebuttons/question x=162 y=277 name=q4
 isempty timeline8?
-obj fg/timelinebuttons/question x=162 y=291
+obj fg/timelinebuttons/question x=162 y=291 name=q5
 isempty timeline9?
-obj fg/timelinebuttons/question x=162 y=305
+obj fg/timelinebuttons/question x=162 y=305 name=q6
 isempty timeline10?
-obj fg/timelinebuttons/question x=162 y=319
+obj fg/timelinebuttons/question x=162 y=319 name=q7
 isempty timeline11?
-obj fg/timelinebuttons/question x=162 y=333
+obj fg/timelinebuttons/question x=162 y=333 name=q8
 isempty timeline12?
-obj fg/timelinebuttons/question x=162 y=347
+obj fg/timelinebuttons/question x=162 y=347 name=q9
 gui Button {_crbut} name=p1 hotkey=enter_down x=170 y=469 test
 gui Button {lilianrecap} name=p2 graphic=fg/timelinebuttons/tl_lilian graphichigh=fg/timelinebuttons/tl_lilian_high x=0 y=192 
 gui Button {covaingerrecap} name=p3 graphic=fg/timelinebuttons/tl_ch graphichigh=fg/timelinebuttons/tl_ch_high x=18 y=192 
 gui Button {marikorecap} name=p4 graphic=fg/timelinebuttons/tl_m graphichigh=fg/timelinebuttons/tl_m_high x=50 y=192 
-gui Button {axioms} name=p7 graphic=fg/timelinebuttons/axioms graphichigh=fg/timelinebuttons/axioms_high x=0 y=361
-gui Button {evaluate} name=p8 graphic=fg/timelinebuttons/evaluate graphichigh=fg/timelinebuttons/evaluate_high x=155 y=361
-gui Button {select4} name=p9 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=235
-gui Button {select5} name=p10 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=249
-gui Button {select6} name=p11 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=263
-gui Button {select7} name=p12 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=277
-gui Button {select8} name=p13 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=291
-gui Button {select9} name=p14 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=305
-gui Button {select10} name=p15 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=319
-gui Button {select11} name=p16 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=333
-gui Button {select12} name=p17 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=347
+gui Button {axioms} name=p5 graphic=fg/timelinebuttons/axioms graphichigh=fg/timelinebuttons/axioms_high x=0 y=361
+gui Button {evaluate} name=p6 graphic=fg/timelinebuttons/evaluate graphichigh=fg/timelinebuttons/evaluate_high x=155 y=361
+gui Button {select1} name=p7 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=193
+gui Button {select2} name=p8 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=207
+gui Button {select3} name=p9 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=221
+gui Button {select4} name=p10 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=235
+gui Button {select5} name=p11 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=249
+gui Button {select6} name=p12 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=263
+gui Button {select7} name=p13 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=277
+gui Button {select8} name=p14 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=291
+gui Button {select9} name=p15 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=305
+gui Button {select10} name=p16 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=319
+gui Button {select11} name=p17 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=333
+gui Button {select12} name=p18 graphic=fg/timelinebuttons/realtimelinearrow graphichigh=fg/timelinebuttons/realtimelinearrow_high x=162 y=347
 gui Wait 
 
 macro lilianrecap
-clear
+{deleteall}
 bg timeline-bg stack
 bg timeline-bg-overlay stack
 fg timeline-overlay-2 nowait
@@ -71,7 +76,7 @@ script sceneminigame
 endmacro
 
 macro covaingerrecap
-clear
+{deleteall}
 bg timeline-bg stack
 bg timeline-bg-overlay stack
 fg timeline-overlay-2 nowait
@@ -89,6 +94,21 @@ char aurelia hide
 "I can keep the investigation in mind, but..."
 "...for now, the end point of my timeline should be everyone being gathered at the scene."
 script sceneminigame
+endmacro
+
+macro select1
+set timelinebutton1 active
+{locationselect}
+endmacro
+
+macro select2
+set timelinebutton2 active
+{locationselect}
+endmacro
+
+macro select3
+set timelinebutton3 active
+{locationselect}
 endmacro
 
 macro select4
@@ -142,7 +162,7 @@ set timelinebutton12 active
 endmacro
 
 macro marikorecap
-clear
+{deleteall}
 bg timeline-bg stack
 bg timeline-bg-overlay stack
 fg timeline-overlay-2 nowait
@@ -166,7 +186,7 @@ script sceneminigame
 endmacro
 
 macro axioms
-clear
+{deleteall}
 bg timeline-bg stack
 bg timeline-bg-overlay stack
 fg timeline-overlay-2 nowait
@@ -179,15 +199,15 @@ endmacro
 
 macro selectcharacter
 # make it to where each button sets their variable to 'active' then when they get the final result, set that button to inactive
-clear
+{deleteall}
 bg timeline-bg stack
 bg timeline-bg-overlay stack
 fg timeline-overlay-2 nowait
 fg timelinebuttons/selectchar name=charselect y=192 stack nowait
-gui Button {lilianselect} name=p5 graphic=fg/timelinebuttons/lilian graphichigh=fg/timelinebuttons/lilian_high y=229 x=75
-gui Button {covaselect} name=p5 graphic=fg/timelinebuttons/cova graphichigh=fg/timelinebuttons/cova_high y=257 x=75
-gui Button {hellingerselect} name=p5 graphic=fg/timelinebuttons/hellinger graphichigh=fg/timelinebuttons/hellinger_high y=286 x=75
-gui Button {marikoselect} name=p5 graphic=fg/timelinebuttons/mariko graphichigh=fg/timelinebuttons/mariko_high y=315 x=75
+gui Button {lilianselect} name=p1 graphic=fg/timelinebuttons/lilian graphichigh=fg/timelinebuttons/lilian_high y=229 x=75
+gui Button {covaselect} name=p2 graphic=fg/timelinebuttons/cova graphichigh=fg/timelinebuttons/cova_high y=257 x=75
+gui Button {hellingerselect} name=p3 graphic=fg/timelinebuttons/hellinger graphichigh=fg/timelinebuttons/hellinger_high y=286 x=75
+gui Button {marikoselect} name=p4 graphic=fg/timelinebuttons/mariko graphichigh=fg/timelinebuttons/mariko_high y=315 x=75
 gui Button {culpritselect} name=p5 graphic=fg/timelinebuttons/culprit graphichigh=fg/timelinebuttons/culprit_high y=344 x=75
 gui Wait
 
@@ -334,7 +354,7 @@ set timeline12 culprit
 endmacro 
 
 macro locationselect
-clear
+{deleteall}
 bg timeline-bg stack
 bg timeline-bg-overlay stack
 fg timeline-overlay-2 nowait
@@ -369,7 +389,7 @@ isempty timeline11 gofinish
 isempty timeline12 gofinish
 
 label gofinish
-clear
+{deleteall}
 bg timeline-bg stack
 bg timeline-bg-overlay stack
 fg timeline-overlay-2 nowait

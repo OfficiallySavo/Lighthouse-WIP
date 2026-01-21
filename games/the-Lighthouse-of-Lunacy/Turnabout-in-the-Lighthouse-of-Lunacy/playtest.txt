@@ -18,4 +18,5 @@ addev than2$
 setflag offtrain
 setflag coastdone
 textskipcheck
+script scene17
 script sceneminigame

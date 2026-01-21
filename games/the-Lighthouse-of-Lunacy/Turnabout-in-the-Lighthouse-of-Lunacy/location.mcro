@@ -14,31 +14,40 @@ is timelinebutton12 active setb12
 
 label setb4
 set t4location 2
-endlocation
+{endlocation}
 label setb5
 set t5location 2
-endlocation
+{endlocation}
 label setb6
 set t6location 2
-endlocation
+{endlocation}
 label setb7
 set t7location 2
-endlocation
+{endlocation}
 label setb8
 set t8location 2
-endlocation
+{endlocation}
 label setb9
 set t9location 2
-endlocation
+{endlocation}
 label setb10
 set t10location 2
-endlocation
+{endlocation}
 label setb11
 set t11location 2
-endlocation
+{endlocation}
 label setb12
 set t12location 2
-endlocation
+{endlocation}
+label setlilianinit
+set t1location 2
+{endlocation}
+label setcovaingerinit
+set t2location 2
+{endlocation}
+label setmarikoinit
+set t3location 2
+{endlocation}
 endmacro
 
 macro location1
@@ -57,31 +66,40 @@ is timelinebutton12 active setb12
 
 label setb4
 set t4location 1
-endlocation
+{endlocation}
 label setb5
 set t5location 1
-endlocation
+{endlocation}
 label setb6
 set t6location 1
-endlocation
+{endlocation}
 label setb7
 set t7location 1
-endlocation
+{endlocation}
 label setb8
 set t8location 1
-endlocation
+{endlocation}
 label setb9
 set t9location 1
-endlocation
+{endlocation}
 label setb10
 set t10location 1
-endlocation
+{endlocation}
 label setb11
 set t11location 1
-endlocation
+{endlocation}
 label setb12
 set t12location 1
-endlocation
+{endlocation}
+label setlilianinit
+set t1location 1
+{endlocation}
+label setcovaingerinit
+set t2location 1
+{endlocation}
+label setmarikoinit
+set t3location 1
+{endlocation}
 endmacro
 
 macro location3
@@ -100,31 +118,40 @@ is timelinebutton12 active setb12
 
 label setb4
 set t4location 3
-endlocation
+{endlocation}
 label setb5
 set t5location 3
-endlocation
+{endlocation}
 label setb6
 set t6location 3
-endlocation
+{endlocation}
 label setb7
 set t7location 3
-endlocation
+{endlocation}
 label setb8
 set t8location 3
-endlocation
+{endlocation}
 label setb9
 set t9location 3
-endlocation
+{endlocation}
 label setb10
 set t10location 3
-endlocation
+{endlocation}
 label setb11
 set t11location 3
-endlocation
+{endlocation}
 label setb12
 set t12location 3
-endlocation
+{endlocation}
+label setlilianinit
+set t1location 3
+{endlocation}
+label setcovaingerinit
+set t2location 3
+{endlocation}
+label setmarikoinit
+set t3location 3
+{endlocation}
 endmacro
 
 macro location4
@@ -143,31 +170,40 @@ is timelinebutton12 active setb12
 
 label setb4
 set t4location 4
-endlocation
+{endlocation}
 label setb5
 set t5location 4
-endlocation
+{endlocation}
 label setb6
 set t6location 4
-endlocation
+{endlocation}
 label setb7
 set t7location 4
-endlocation
+{endlocation}
 label setb8
 set t8location 4
-endlocation
+{endlocation}
 label setb9
 set t9location 4
-endlocation
+{endlocation}
 label setb10
 set t10location 4
-endlocation
+{endlocation}
 label setb11
 set t11location 4
-endlocation
+{endlocation}
 label setb12
 set t12location 4
-endlocation
+{endlocation}
+label setlilianinit
+set t1location 4
+{endlocation}
+label setcovaingerinit
+set t2location 4
+{endlocation}
+label setmarikoinit
+set t3location 4
+{endlocation}
 endmacro
 
 macro location5
@@ -186,31 +222,40 @@ is timelinebutton12 active setb12
 
 label setb4
 set t4location 5
-endlocation
+{endlocation}
 label setb5
 set t5location 5
-endlocation
+{endlocation}
 label setb6
 set t6location 5
-endlocation
+{endlocation}
 label setb7
 set t7location 5
-endlocation
+{endlocation}
 label setb8
 set t8location 5
-endlocation
+{endlocation}
 label setb9
 set t9location 5
-endlocation
+{endlocation}
 label setb10
 set t10location 5
-endlocation
+{endlocation}
 label setb11
 set t11location 5
-endlocation
+{endlocation}
 label setb12
 set t12location 5
-endlocation
+{endlocation}
+label setlilianinit
+set t1location 5
+{endlocation}
+label setcovaingerinit
+set t2location 5
+{endlocation}
+label setmarikoinit
+set t3location 5
+{endlocation}
 endmacro
 
 macro location6
@@ -229,31 +274,40 @@ is timelinebutton12 active setb12
 
 label setb4
 set t4location 6
-endlocation
+{endlocation}
 label setb5
 set t5location 6
-endlocation
+{endlocation}
 label setb6
 set t6location 6
-endlocation
+{endlocation}
 label setb7
 set t7location 6
-endlocation
+{endlocation}
 label setb8
 set t8location 6
-endlocation
+{endlocation}
 label setb9
 set t9location 6
-endlocation
+{endlocation}
 label setb10
 set t10location 6
-endlocation
+{endlocation}
 label setb11
 set t11location 6
-endlocation
+{endlocation}
 label setb12
 set t12location 6
-endlocation
+{endlocation}
+label setlilianinit
+set t1location 6
+{endlocation}
+label setcovaingerinit
+set t2location 6
+{endlocation}
+label setmarikoinit
+set t3location 6
+{endlocation}
 endmacro
 
 macro location7
@@ -272,31 +326,40 @@ is timelinebutton12 active setb12
 
 label setb4
 set t4location 7
-endlocation
+{endlocation}
 label setb5
 set t5location 7
-endlocation
+{endlocation}
 label setb6
 set t6location 7
-endlocation
+{endlocation}
 label setb7
 set t7location 7
-endlocation
+{endlocation}
 label setb8
 set t8location 7
-endlocation
+{endlocation}
 label setb9
 set t9location 7
-endlocation
+{endlocation}
 label setb10
 set t10location 7
-endlocation
+{endlocation}
 label setb11
 set t11location 7
-endlocation
+{endlocation}
 label setb12
 set t12location 7
-endlocation
+{endlocation}
+label setlilianinit
+set t1location 7
+{endlocation}
+label setcovaingerinit
+set t2location 7
+{endlocation}
+label setmarikoinit
+set t3location 7
+{endlocation}
 endmacro
 
 macro location8
@@ -315,31 +378,40 @@ is timelinebutton12 active setb12
 
 label setb4
 set t4location 8
-endlocation
+{endlocation}
 label setb5
 set t5location 8
-endlocation
+{endlocation}
 label setb6
 set t6location 8
-endlocation
+{endlocation}
 label setb7
 set t7location 8
-endlocation
+{endlocation}
 label setb8
 set t8location 8
-endlocation
+{endlocation}
 label setb9
 set t4location 8
-endlocation
+{endlocation}
 label setb10
 set t10location 8
-endlocation
+{endlocation}
 label setb11
 set t11location 8
-endlocation
+{endlocation}
 label setb12
 set t12location 8
-endlocation
+{endlocation}
+label setlilianinit
+set t1location 8
+{endlocation}
+label setcovaingerinit
+set t2location 8
+{endlocation}
+label setmarikoinit
+set t3location 8
+{endlocation}
 endmacro
 
 macro location9
@@ -358,31 +430,40 @@ is timelinebutton12 active setb12
 
 label setb4
 set t4location 9
-endlocation
+{endlocation}
 label setb5
 set t5location 9
-endlocation
+{endlocation}
 label setb6
 set t6location 9
-endlocation
+{endlocation}
 label setb7
 set t7location 9
-endlocation
+{endlocation}
 label setb8
 set t8location 9
-endlocation
+{endlocation}
 label setb9
 set t9location 9
-endlocation
+{endlocation}
 label setb10
 set t10location 9
-endlocation
+{endlocation}
 label setb11
 set t11location 9
-endlocation
+{endlocation}
 label setb12
 set t12location 9
-endlocation
+{endlocation}
+label setlilianinit
+set t1location 9
+{endlocation}
+label setcovaingerinit
+set t2location 9
+{endlocation}
+label setmarikoinit
+set t3location 9
+{endlocation}
 endmacro
 
 macro location10
@@ -401,31 +482,40 @@ is timelinebutton12 active setb12
 
 label setb4
 set t4location 10
-endlocation
+{endlocation}
 label setb5
 set t5location 10
-endlocation
+{endlocation}
 label setb6
 set t6location 10
-endlocation
+{endlocation}
 label setb7
 set t7location 10
-endlocation
+{endlocation}
 label setb8
 set t8location 10
-endlocation
+{endlocation}
 label setb9
 set t9location 10
-endlocation
+{endlocation}
 label setb10
 set t10location 10
-endlocation
+{endlocation}
 label setb11
 set t11location 10
-endlocation
+{endlocation}
 label setb12
 set t12location 10
-endlocation
+{endlocation}
+label setlilianinit
+set t1location 10
+{endlocation}
+label setcovaingerinit
+set t2location 10
+{endlocation}
+label setmarikoinit
+set t3location 10
+{endlocation}
 endmacro
 
 macro location11
@@ -445,31 +535,40 @@ is timelinebutton12 active setb12
 
 label setb4
 set t4location 11
-endlocation
+{endlocation}
 label setb5
 set t5location 11
-endlocation
+{endlocation}
 label setb6
 set t6location 11
-endlocation
+{endlocation}
 label setb7
 set t7location 11
-endlocation
+{endlocation}
 label setb8
 set t8location 11
-endlocation
+{endlocation}
 label setb9
 set t9location 11
-endlocation
+{endlocation}
 label setb10
 set t10location 11
-endlocation
+{endlocation}
 label setb11
 set t11location 11
-endlocation
+{endlocation}
 label setb12
 set t12location 11
-endlocation
+{endlocation}
+label setlilianinit
+set t1location 11
+{endlocation}
+label setcovaingerinit
+set t2location 11
+{endlocation}
+label setmarikoinit
+set t3location 11
+{endlocation}
 endmacro
 
 macro endlocation
@@ -541,16 +640,355 @@ is t4location 11 placeaj
 is t3location 11 placeaj
 is t2location 11 placeaj
 is t1location 11 placeaj
-goto end
+goto next2
 
 label placeaj
 fg secretroomaj y=192 nowait
+goto next2
+
+label next2
+
+label end
+endmacro
+
+macro placelilian
+is timeline12 lilian wpht12
+is timeline11 lilian wpht11
+is timeline10 lilian wpht10
+is timeline9 lilian wpht9
+is timeline8 lilian wpht8
+is timeline7 lilian wpht7
+is timeline6 lilian wpht6
+is timeline5 lilian wpht5
+is timeline4 lilian wpht4
+goto wpht1
+
+label wpht12
+is t12location 1?
+fg timeline/mapl2 y=192
+is t12location 2?
+fg timeline/mapl8 y=192
+is t12location 3?
+fg timeline/mapl4 y=192
+is t12location 4?
+fg timeline/mapl11 y=192
+is t12location 5?
+fg timeline/mapl5 y=192
+is t12location 6?
+fg timeline/mapl9 y=192
+is t12location 7?
+fg timeline/mapl1 y=192
+is t12location 8?
+fg timeline/mapl6 y=192
+is t12location 9?
+fg timeline/mapl7 y=192
+is t12location 10?
+fg timeline/mapl3 y=192
+is t12location 11?
+fg timeline/mapl10 y=192
+goto end
+
+label wpht11
+is t11location 1?
+fg timeline/mapl2 y=192
+is t11location 2?
+fg timeline/mapl8 y=192
+is t11location 3?
+fg timeline/mapl4 y=192
+is t11location 4?
+fg timeline/mapl11 y=192
+is t11location 5?
+fg timeline/mapl5 y=192
+is t11location 6?
+fg timeline/mapl9 y=192
+is t11location 7?
+fg timeline/mapl1 y=192
+is t11location 8?
+fg timeline/mapl6 y=192
+is t11location 9?
+fg timeline/mapl7 y=192
+is t11location 10?
+fg timeline/mapl3 y=192
+is t11location 11?
+fg timeline/mapl10 y=192
+goto end
+
+label wpht10
+is t10location 1?
+fg timeline/mapl2 y=192
+is t10location 2?
+fg timeline/mapl8 y=192
+is t10location 3?
+fg timeline/mapl4 y=192
+is t10location 4?
+fg timeline/mapl11 y=192
+is t10location 5?
+fg timeline/mapl5 y=192
+is t10location 6?
+fg timeline/mapl9 y=192
+is t10location 7?
+fg timeline/mapl1 y=192
+is t10location 8?
+fg timeline/mapl6 y=192
+is t10location 9?
+fg timeline/mapl7 y=192
+is t10location 10?
+fg timeline/mapl3 y=192
+is t10location 11?
+fg timeline/mapl10 y=192
+goto end
+
+label wpht9
+is t9location 1?
+fg timeline/mapl2 y=192
+is t9location 2?
+fg timeline/mapl8 y=192
+is t9location 3?
+fg timeline/mapl4 y=192
+is t9location 4?
+fg timeline/mapl11 y=192
+is t9location 5?
+fg timeline/mapl5 y=192
+is t9location 6?
+fg timeline/mapl9 y=192
+is t9location 7?
+fg timeline/mapl1 y=192
+is t9location 8?
+fg timeline/mapl6 y=192
+is t9location 9?
+fg timeline/mapl7 y=192
+is t9location 10?
+fg timeline/mapl3 y=192
+is t9location 11?
+fg timeline/mapl10 y=192
+goto end
+
+label wpht8
+is t8location 1?
+fg timeline/mapl2 y=192
+is t8location 2?
+fg timeline/mapl8 y=192
+is t8location 3?
+fg timeline/mapl4 y=192
+is t8location 4?
+fg timeline/mapl11 y=192
+is t8location 5?
+fg timeline/mapl5 y=192
+is t8location 6?
+fg timeline/mapl9 y=192
+is t8location 7?
+fg timeline/mapl1 y=192
+is t8location 8?
+fg timeline/mapl6 y=192
+is t8location 9?
+fg timeline/mapl7 y=192
+is t8location 10?
+fg timeline/mapl3 y=192
+is t8location 11?
+fg timeline/mapl10 y=192
+goto end
+
+label wpht7
+is t7location 1?
+fg timeline/mapl2 y=192
+is t7location 2?
+fg timeline/mapl8 y=192
+is t7location 3?
+fg timeline/mapl4 y=192
+is t7location 4?
+fg timeline/mapl11 y=192
+is t7location 5?
+fg timeline/mapl5 y=192
+is t7location 6?
+fg timeline/mapl9 y=192
+is t7location 7?
+fg timeline/mapl1 y=192
+is t7location 8?
+fg timeline/mapl6 y=192
+is t7location 9?
+fg timeline/mapl7 y=192
+is t7location 10?
+fg timeline/mapl3 y=192
+is t7location 11?
+fg timeline/mapl10 y=192
+goto end
+
+label wpht6
+is t6location 1?
+fg timeline/mapl2 y=192
+is t6location 2?
+fg timeline/mapl8 y=192
+is t6location 3?
+fg timeline/mapl4 y=192
+is t6location 4?
+fg timeline/mapl11 y=192
+is t6location 5?
+fg timeline/mapl5 y=192
+is t6location 6?
+fg timeline/mapl9 y=192
+is t6location 7?
+fg timeline/mapl1 y=192
+is t6location 8?
+fg timeline/mapl6 y=192
+is t6location 9?
+fg timeline/mapl7 y=192
+is t6location 10?
+fg timeline/mapl3 y=192
+is t6location 11?
+fg timeline/mapl10 y=192
+goto end
+
+label wpht5
+is t5location 1?
+fg timeline/mapl2 y=192
+is t5location 2?
+fg timeline/mapl8 y=192
+is t5location 3?
+fg timeline/mapl4 y=192
+is t5location 4?
+fg timeline/mapl11 y=192
+is t5location 5?
+fg timeline/mapl5 y=192
+is t5location 6?
+fg timeline/mapl9 y=192
+is t5location 7?
+fg timeline/mapl1 y=192
+is t5location 8?
+fg timeline/mapl6 y=192
+is t5location 9?
+fg timeline/mapl7 y=192
+is t5location 10?
+fg timeline/mapl3 y=192
+is t5location 11?
+fg timeline/mapl10 y=192
+goto end
+
+label wpht4
+is t4alocation 1?
+fg timeline/mapl2 y=192
+is t4alocation 2?
+fg timeline/mapl8 y=192
+is t4alocation 3?
+fg timeline/mapl4 y=192
+is t4alocation 4?
+fg timeline/mapl11 y=192
+is t4alocation 5?
+fg timeline/mapl5 y=192
+is t4alocation 6?
+fg timeline/mapl9 y=192
+is t4alocation 7?
+fg timeline/mapl1 y=192
+is t4alocation 8?
+fg timeline/mapl6 y=192
+is t4alocation 9?
+fg timeline/mapl7 y=192
+is t4alocation 10?
+fg timeline/mapl3 y=192
+is t4alocation 11?
+fg timeline/mapl10 y=192
+goto end
+
+label wpht1
+is t1location 1?
+fg timeline/mapl2 y=192
+is t1location 2?
+fg timeline/mapl8 y=192
+is t1location 3?
+fg timeline/mapl4 y=192
+is t1location 4?
+fg timeline/mapl11 y=192
+is t1location 5?
+fg timeline/mapl5 y=192
+is t1location 6?
+fg timeline/mapl9 y=192
+is t1location 7?
+fg timeline/mapl1 y=192
+is t1location 8?
+fg timeline/mapl6 y=192
+is t1location 9?
+fg timeline/mapl7 y=192
+is t1location 10?
+fg timeline/mapl3 y=192
+is t1location 11?
+fg timeline/mapl10 y=192
 goto end
 
 label end
 endmacro
 
 macro placemarkers
+
+label markers1
+is t1location 11?
+fg timeline/p-aj y=192
+is t1location 10?
+fg timeline/p-auto y=192
+is t1location 9?
+fg timeline/p-shelf-r y=192
+is t1location 8?
+fg timeline/p-shelf-l y=192
+is t1location 7?
+fg timeline/p-justice y=192
+is t1location 6?
+fg timeline/p-ba y=192
+is t1location 5?
+fg timeline/p-hallway-r y=192
+is t1location 4?
+fg timeline/p-elevator y=192
+is t1location 3?
+fg timeline/p-hallway-l y=192
+is t1location 2?
+fg timeline/p-jb y=192
+is t1location 1?
+fg timeline/p-bene y=192
+
+label markers2
+is t2location 11?
+fg timeline/p-aj y=206
+is t2location 10?
+fg timeline/p-auto y=206
+is t2location 9?
+fg timeline/p-shelf-r y=206
+is t2location 8?
+fg timeline/p-shelf-l y=206
+is t2location 7?
+fg timeline/p-justice y=206
+is t2location 6?
+fg timeline/p-ba y=206
+is t2location 5?
+fg timeline/p-hallway-r y=206
+is t2location 4?
+fg timeline/p-elevator y=206
+is t2location 3?
+fg timeline/p-hallway-l y=206
+is t2location 2?
+fg timeline/p-jb y=206
+is t2location 1?
+fg timeline/p-bene y=206
+
+label markers3
+is t3location 11?
+fg timeline/p-aj y=220
+is t3location 10?
+fg timeline/p-auto y=220
+is t3location 9?
+fg timeline/p-shelf-r y=220
+is t3location 8?
+fg timeline/p-shelf-l y=220
+is t3location 7?
+fg timeline/p-justice y=220
+is t3location 6?
+fg timeline/p-ba y=220
+is t3location 5?
+fg timeline/p-hallway-r y=220
+is t3location 4?
+fg timeline/p-elevator y=220
+is t3location 3?
+fg timeline/p-hallway-l y=220
+is t3location 2?
+fg timeline/p-jb y=220
+is t3location 1?
+fg timeline/p-bene y=220
 
 label markers4
 is t4location 11?
@@ -867,4 +1305,51 @@ obj fg/timelinebuttons/covaarrow x=162 y=347
 is timeline12 culprit?
 obj fg/timelinebuttons/culpritarrow x=162 y=347
 
+endmacro
+
+macro deleteall
+delete name=p1
+delete name=p2
+delete name=p3
+delete name=p4
+delete name=p5
+delete name=p6
+delete name=p7
+delete name=p8
+delete name=p9
+delete name=p10
+delete name=p11
+delete name=p12
+delete name=p13
+delete name=p14
+delete name=p15
+delete name=p16
+delete name=p17
+delete name=p18
+delete name=q1
+delete name=q2
+delete name=q3
+delete name=q4
+delete name=q5
+delete name=q6
+delete name=q6
+delete name=q7
+delete name=q8
+delete name=q9
+delete name=pewpew
+delete name=list
+delete name=map
+delete name=locationselectbg
+delete name=l1
+delete name=l2
+delete name=l3
+delete name=l4
+delete name=l5
+delete name=l6
+delete name=l7
+delete name=l8
+delete name=l9
+delete name=l10
+delete name=l11
+delete name=l
 endmacro
