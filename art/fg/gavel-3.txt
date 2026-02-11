@@ -1,3 +1,0 @@
-horizontal 6
-loops 3
-sfx 1 Gavel.ogg

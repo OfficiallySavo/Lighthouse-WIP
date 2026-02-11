@@ -1,7 +1,0 @@
-bg knife2 fade
-
-bg mainlol y=192 stack
-
-ev knife x=93 y=256
-
-gui Back y=350

@@ -1,4 +1,0 @@
-bg doorcheck1 fade
-bg mainlol y=192 stack
-ev door x=93 y=256
-gui Back y=350

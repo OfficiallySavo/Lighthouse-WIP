@@ -1,4 +1,0 @@
-bg newszoomev fade
-bg mainlol y=192 stack
-ev clipping x=93 y=256
-gui Back y=350
