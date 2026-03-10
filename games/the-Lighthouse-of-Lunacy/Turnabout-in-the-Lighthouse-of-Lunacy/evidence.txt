@@ -96,6 +96,11 @@ set hunt1_pic HUNT
 set hunt1_desc The detective uses numerous machines to conduct her investigations. Check for details.
 set hunt1_check check_hunt.txt
 
+set hunt2_name HUNT
+set hunt2_pic HUNT
+set hunt2_desc The detective uses numerous machines to conduct her investigations. Apparently, some of the devices make a lot of noise while booting up. Check for details.
+set hunt2_check check_hunt.txt
+
 set suitcase_name Suitcase
 set suitcase_pic suitcase
 set suitcase_desc Found standing near the windows in the display room. The letters "dW" are visible on the front. It's empty.
@@ -103,6 +108,11 @@ set suitcase_desc Found standing near the windows in the display room. The lette
 set fork_name Turning Fork
 set fork_pic fork
 set fork_desc Found on the floor near a display stand.
+
+set diagram_name Tower Diagram
+set diagram_pic photo
+set diagram_desc General information about the building as well as a diagram of the crime scene. Check for details.
+set diagram_check check_diagram.txt
 
 //PROFILES
 
@@ -141,6 +151,16 @@ set victoria$_desc Age: 23{n}Gender: Female{n}The "lawyer" representing Ms. Hold
 set dowe$_name Jones Dowe
 set dowe$_pic dowe
 set dowe$_desc Age: 73{n}Gender: Male {n}One of the auction guests and eyewitness to the crime. 
+
+set dowe2$_name Jones Dowe
+set dowe2$_pic dowe
+set dowe2$_desc Age: 73{n}Gender: Male {n}One of the auction guests and eyewitness to the crime. Check for details.
+set dowe2$_check check_dowe2.txt
+
+set dowe3$_name Jones Dowe
+set dowe3$_pic dowe
+set dowe3$_desc Age: 73{n}Gender: Male {n}One of the auction guests and eyewitness to the crime. Check for details.
+set dowe3$_check check_dowe3.txt
 
 set neland$_name Waldis Neland
 set neland$_pic neland

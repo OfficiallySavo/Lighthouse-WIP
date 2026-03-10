@@ -2,5 +2,5 @@ horizontal 2
 vertical 1
 length 2
 loops 1
-framedelay 0 60
-framedelay 1 30
+framedelay 0 100
+framedelay 1 100

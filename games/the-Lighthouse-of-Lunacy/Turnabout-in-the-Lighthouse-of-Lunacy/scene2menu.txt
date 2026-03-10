@@ -563,7 +563,7 @@ char aurelia hide
 "..."
 label covashoot
 list causechaos
-set _list_back_button_false
+set _list_back_button false
 li Commit Robbery
 li Stop this Madness
 showlist

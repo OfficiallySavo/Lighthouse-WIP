@@ -1,0 +1,4 @@
+bg dowecheck2 fade
+bg mainlol y=192 stack
+ev dowe x=93 y=256
+gui Back y=350

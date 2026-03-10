@@ -1,4 +1,4 @@
-label test1start
+label test2start
 textskipcheck
 set _textbox_bg general/textbox2
 "{next}"
@@ -23,50 +23,29 @@ set _textbox_bg general/textbox2
 set _cr_button true
 set _testimony_blinker false
 moderato2016
-set testimonytimestop a
 
-# Scroll macro for 3 people at the bench
-# Syntax: widescroll left|middle|right
-setvar _widescroll_pos middle
-macro widescroll
-	# Shut those yappers up
-	setprop blink name=mono prop=supermode
-	setprop blink name=neland prop=supermode
-	setprop blink name=dowe prop=supermode
+# Scroll to: Will attempt to center the world on the specified object.
+# Usage: scrollto name=CHARACTER/OBJECT
+macro scrollto
 
-	setvar _new_widescroll_pos $1
+# Talkfix
+setprop blink name=mono prop=supermode
+setprop blink name=neland prop=supermode
+setprop blink name=dowe prop=supermode
 
-	# If position is same, don't bother with the math
-	is_ex _new_widescroll_pos == _widescroll_pos widescrollend
+# Get target sprite position
+getprop _x_pos name=$name prop=x
 
-	is _widescroll_pos left?
-	set _scroll_start_x 1
-	is _widescroll_pos middle?
-	set _scroll_start_x 81
-	is _widescroll_pos right?
-	set _scroll_start_x 161
+# Invert +/-
+setvar _scroll_delta 0
+subvar _scroll_delta $_x_pos
 
-	is _new_widescroll_pos left?
-	set _scroll_end_x 1
-	is _new_widescroll_pos middle?
-	set _scroll_end_x 81
-	is _new_widescroll_pos right?
-	set _scroll_end_x 161
+# Scroll
+scroll name=widewitnessbg 
+scroll char mono e=normal x=$_scroll_delta speed=10
+scroll char neland e=normal stack
+scroll char dowe stack
 
-	print $_widescroll_pos $_new_widescroll_pos
-	# Example: 80 (middle) - 160 (right) = -80 (1 move right because everything goes left)
-	setvar_ex _scroll_difference _scroll_start_x - _scroll_end_x
-
-	print _scroll_difference $_scroll_difference
-
-	scroll name=widewitnessbg 
-	scroll char mono e=normal x=$_scroll_difference speed=10
-	scroll char neland e=normal stack
-	scroll char dowe stack
-
-	set _widescroll_pos $_new_widescroll_pos
-
-	label widescrollend
 endmacro
 
 label start
@@ -82,7 +61,7 @@ set dot 1
 #scroll char mono e=normal x=80 speed=10
 #scroll char neland e=normal stack
 #scroll char dowe stack
-widescroll left
+scrollto name=neland
 dots
 
 setvar _speaking neland
@@ -95,7 +74,7 @@ set dot 2
 #scroll char mono e=normal x=-80 speed=10
 #scroll char neland e=normal stack
 #scroll char dowe stack
-widescroll middle
+scrollto name=dowe
 dots
 
 setvar _speaking dowe
@@ -104,7 +83,7 @@ emo normal
 
 statement men1C
 set dot 3
-widescroll right
+scrollto name=mono
 dots
 
 setvar _speaking mono
@@ -113,16 +92,17 @@ emo normal
 
 statement men1D
 set dot 4
-widescroll left
+scrollto name=neland
 dots
 
 setvar _speaking neland
 emo happy
 "Next up was the auctioneer.{p30} Must've noticed the trespassing and followed the perp."
 
+label men1E
 statement men1E
 set dot 5
-widescroll middle
+scrollto name=dowe
 dots
 
 setvar _speaking dowe
@@ -131,7 +111,7 @@ emo mad
 
 statement men1F
 set dot 6
-widescroll left
+scrollto name=neland
 dots
 
 setvar _speaking neland
@@ -140,7 +120,7 @@ emo smug
 
 statement men1G
 set dot 7
-widescroll right
+scrollto name=mono
 dots
 
 setvar _speaking mono
@@ -154,6 +134,7 @@ delete name=penalty
 fg black
 fade in name=black
 pause 30
+label cctalk
 bg defensebg
 fg dbench
 char aurelia e=d-normal
@@ -228,32 +209,32 @@ fg witstand stack x=80
 setvar _speaking neland
 emo normal
 "We were discussing the auction.{p30} Nothing special."
-widescroll middle
+scrollto name=dowe
 
 setvar _speaking dowe
 emo normal
 "Discussing?{p30} You were running your mouth because you couldn't handle losing!"
-widescroll left
+scrollto name=neland
 
 setvar _speaking neland
 emo smug
 "Don't know what banter is,{p15} oldtimer?{p30} You should try it at one of your boring parties. "
-widescroll middle
+scrollto name=dowe
 
 setvar _speaking dowe
 emo mad
 "{sfx anger}Balderdash!{p30} You were absolutely mad.{p30} Right,{p15} Mono?"
-widescroll right
+scrollto name=mono
 
 setvar _speaking mono
 emo side
 "Well,{p15} Mr. Neland may have been a tiny bit..."
-widescroll left
+scrollto name=neland
 
 setvar _speaking neland
 emo crazy
 "{sfx huh}{c gr}Careful what you say,{p15} Mono."
-widescroll right
+scrollto name=mono
 
 setvar _speaking mono
 emo sweat
@@ -275,24 +256,27 @@ fg witstand stack x=80
 setvar _speaking neland
 emo normal
 "That plainly ain't how you play auctions.{p30} I was giving the oldtimer some friendly advice."
-widescroll right
+
+scrollto name=dowe
 
 setvar _speaking dowe
 emo normal
 "You don't know the first thing.{p30} You've got to shock everyone with high numbers."
-widescroll middle
+
+scrollto name=neland
 
 setvar _speaking neland
 emo normal
 "How many times do I have to teach you this?{p15} That'll just make them save their gunpowder."
 emo happy
 "{sfx anger}{s10}You've got to wait for the valuable stuff before you strike,{p15} or you'll be out of money by then."
-widescroll right
+scrollto name=dowe
 
 setvar _speaking dowe
 emo normal
 "You still think that thing would have actually turned up?"
-widescroll middle
+
+scrollto name=neland
 
 setvar _speaking neland
 emo happy
@@ -313,12 +297,14 @@ fg witstand stack x=-80
 setvar _speaking mono
 emo closed
 "{sfx idea}{f10}The statuette of Thanatos..."
-widescroll left
+
+scrollto name=dowe
 
 setvar _speaking dowe
 emo normal
 "Dr. Leid was said to possess a real Ancient Greek figure."
-widescroll middle
+
+scrollto name=mono
 
 setvar _speaking mono
 emo side
@@ -328,40 +314,44 @@ pause 120
 "{next}"
 music_fade_out nowait
 mus
-widescroll left
+
+scrollto name=dowe
 
 setvar _speaking dowe
 emo mad
 "{sfx shouting}{s10}One million!{p30}{next}"
-widescroll left
-widescroll left
+
+scrollto name=neland
 
 setvar _speaking neland
 emo angry
 "{sfx shocked}{s10}Two million!{p30}{next}"
-widescroll left
+
+scrollto name=dowe
 
 setvar _speaking dowe
 emo mad
 "{sfx shouting}{s10}Seven million!{p30}{next}"
-widescroll left
-widescroll left
+
+scrollto name=neland
 
 setvar _speaking neland
 emo angry
 "{sfx ohno}{f10}Ten million!{p30}{next}"
-widescroll middle
+
+scrollto name=dowe
 
 setvar _speaking dowe
 emo normal
 "You serious?{p15} You don't even have that much on hand."
-widescroll left
-widescroll left
+
+scrollto name=neland
 
 setvar _speaking neland
 emo smug
 "Who cares.{p30} I can take out a loan."
-widescroll middle
+
+scrollto name=mono
 
 setvar _speaking mono
 emo normal
@@ -386,3 +376,1413 @@ pause 10
 scrollpenaltyin
 resume
 
+label press men1B
+scrollpenaltyout
+
+ahi
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+set _ev photo
+showevr
+"Could you point out your exact position on this diagram,{p15} please?"
+hideevr
+
+fg crimescenediagram-clean stack
+fg witness-position nowait stack
+char dowe hide
+"{sfx flashback}{f10}If you insist,{p15} lass."
+"{sfx idea}We stood around here,{p15} at the corner."
+char judge hide
+"You would certainly have a very good view into the hallway from there."
+char neland hide
+"{sfx anger}{s10}Damn straight!{p30} No dead angles whatsoever."
+delete name=crimescenediagram-clean
+delete name=witness-position
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{f10}It does look that way..."
+"{e d-lecture}{sfx idea}Still,{p15} were you actually facing the hallway the whole time?"
+
+bg widewitnessbg x=-100
+char mono e=normal x=80
+char neland e=normal x=-80 stack
+char dowe e=mad stack
+fg witstand stack 
+"{sfx anger}{s10}What are you on about?"
+
+scrollto name=neland
+setvar _speaking neland
+emo happy
+"Nice try,{p15} miss.{p30} But we were standing in a triangle."
+
+bg prosecutorbg2
+fg pbench2
+char victoria
+"Their combined eyes thus gave them perfect 360 degree vision."
+"One of them always had the door in their view."
+
+bg judgebg
+fg judgeseat stack
+char judge
+"I see no issues here."
+scrollpenaltyin
+"{e warning}Or are you suggesting there is a problem with one of these claims?"
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"{sfx idea}No dead angles?{p30} I don't think so."
+"There's definitely a spot they couldn't see from that position!"
+
+bg judgebg
+fg judgeseat stack
+char judge
+"There is?{p30} Could you point it out for us then?"
+
+fg crimescenediagram-clean stack
+char aurelia hide
+"{c g}{f10}The witnesses couldn't have seen what happened in this spot!"
+
+label press men1C
+scrollpenaltyout
+
+macro ahi
+sfx aurelia/holdit
+fg HoldItAnim
+pause 15
+endmacro 
+
+ahi
+
+bg defensebg
+fg dbench
+char aurelia e=d-halt
+"Are you sure that was me?"
+
+bg widewitnessbg x=-160
+char mono e=normal
+char neland e=normal x=-160 stack
+char dowe stack x=-80
+fg witstand stack x=-80
+
+setvar _speaking mono
+emo side
+"Y-Yes,{p15} I'm afraid so."
+
+scrollto name=neland
+setvar _speaking neland
+emo normal
+"Your getup stood out like a sore thumb,{p15} miss."
+
+bg defensebg
+fg dbench
+char aurelia e=d-shock
+"{sfx waaah}{s10}{c b}(Is everyone going to criticize me for this?)"
+
+bg prosecutorbg2
+fg pbench2
+char victoria e=think
+"To commit to such criminal acts even when in such plain view."
+"One should not dare to imagine what depravities you would plan if you possessed the Ring of Gyges."
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"Did you actually see my face,{p15} witness?{p30} No way you paid that much attention to a passerby."
+
+bg widewitnessbg x=-160
+char mono e=normal
+char neland e=normal x=-160 stack
+char dowe stack x=-80
+fg witstand stack x=-80
+
+setvar _speaking mono
+emo closed
+"{p50}{e normal}{sfx idea}Oh,{p15} y-you're asking me?"
+emo stern
+"I saw it.{p30} You were looking around a lot.{p30} It drew my attention,{p15} s-sorry."
+
+bg defensebg
+fg dbench
+char aurelia e=d-sweat
+"{sfx whoops}{c b}(Was I really acting THAT shifty?)"
+"{e d-normal}Okay,{p15} but there was nothing else suspicious about me,{p15} surely?"
+"It's not like you saw me carrying a gun,{p15} for example."
+
+bg widewitnessbg x=-160
+char mono e=normal
+char neland e=normal x=-160 stack
+char dowe stack x=-80
+fg witstand stack x=-80
+
+setvar _speaking mono
+emo normal
+"{s10}N-No..."
+
+bg prosecutorbg2
+fg pbench2
+char victoria
+"An unrefined attempt to exonerate yourself."
+set _ev gunC
+showevl
+char victoria e=smug
+"This weapon is small enough to be concealed easily."
+hideevl
+
+bg defensebg
+fg dbench
+char aurelia e=d-sweat
+"{c b}(I know I've had it with me at the time.{p30} But it's good to know what they know,{p15} I guess.)"
+
+fg black fade 1000
+pause 30
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+fg black z=10
+fade out name=black speed=3
+pause 10
+scrollpenaltyin
+resume
+
+label press men1D
+scrollpenaltyout
+
+ahi
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"Was there anything notable about the manager at that time?"
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"The lady had a stern look on her face."
+emo happy
+"{sfx idea}Reckon she must've hated trespassers just as much as I do."
+"If it wasn't for her trying to handle it,{p15} I might have taken you on myself."
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{c b}(Should I be glad?)"
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"{sfx anger}{s10}Folks need to learn to stick to their lane."
+"You know how many trespassers there are at Luna Park?"
+emo happy
+"They climb the fences.{p30} Some even fake their age to pass off as kids,{p15} can you believe it?"
+
+bg judgebg
+fg judgeseat stack
+char judge
+"It does sound rather evil,{p15} infiltrating a children's park."
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo angry
+"{sfx shouting}I've handed them all what was coming to them!{p30} Don't worry!"
+"{sfx shocked}{s10}Those fiends will NEVER dare pull it again after that!"
+
+bg defensebg
+fg dbench
+char aurelia e=d-sweat
+"{c b}{sfx waaah}(Looking like a fiend yourself there.{p30} Does that park feature a torture chamber?)"
+"{e d-normal}T-To get back to my point,{p15} was there anything else?"
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"Going to have to be more specific there,{p15} miss."
+
+label nelandvic
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"Let's see,{p15} was the victim..."
+penalty threat=15
+list nelvic
+set _list_back_button false
+li Carrying Anything?
+li Still Unharmed?
+showlist
+
+label Carrying Anything?
+delete name=penalty
+bg defensebg
+fg dbench
+char aurelia e=d-lecture
+"{sfx huh}Did you spot anything in her hands?"
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"{sfx idea}You bet I did."
+set _ev knife
+showevl
+"{e happy}She held that knife in her right hand."
+hideevl
+
+bg defensebg
+fg dbench
+char aurelia e=d-smug
+"{sfx huh}That's a little odd,{p15} no?"
+"{e d-index}{sfx idea}She couldn't have seen my pistol.{p30} Why would she take that with her?"
+
+vobj
+courtzoom2dtp d-smug think
+
+bg prosecutorbg2
+fg pbench2
+char victoria e=think
+"Why would you confront a burglar unarmed just because you did not perceive a weapon?"
+"{e normal}She happened to have that knife on hand because it was to be the next auction item."
+"{e think}It's decidedly reasonable for her to keep it with her."
+
+bg judgebg
+fg judgeseat stack
+char judge
+"I agree.{p30} It's not an unnatural course of action."
+
+label nelandvic2
+penalty threat=15
+bg judgebg
+fg judgeseat stack
+char judge
+"Or are you saying there is a contradiction with the victim carrying the knife?"
+list nelvic2
+set _list_back_button false
+li Absolutely
+li I guess not
+showlist
+
+label Absolutely
+delete name=penalty
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"{sfx anger}There absolutely is a problem here!"
+
+bg judgebg
+fg judgeseat stack
+char judge
+"Then please tell the court..."
+
+label nelandvic3
+bg judgebg
+fg judgeseat stack
+char judge
+set _textbox_skipupdate true
+"What is the problem with the victim carrying the knife?"
+pause 120
+set _textbox_skipupdate false
+set _cr_back_button false
+set _profiles_enabled false
+penalty threat=15
+present fail=present_fail noback
+
+macro att
+sfx aurelia/takethat
+fg TakeThatAnim
+pause 15
+endmacro 
+
+att
+set _profiles_enabled true
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"Highly problematic,{p15} right?"
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"{sfx huh}Heh,{p15} you took your best stab at it and came up short."
+"{e smug}Should probably stick to guns,{p15} miss."
+
+bg judgebg
+fg judgeseat stack
+char judge
+"Your argument strikes me as the only problematic thing here,{p15} Ms. Chase."
+char judge e=warning
+sfx penalty
+penalty -15
+pause 30
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{c b}(I've got to rethink my approach...)"
+
+fg black fade 1000
+pause 30
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+fg black z=10
+fade out name=black speed=3
+pause 10
+scrollpenaltyin
+resume
+
+label I guess not
+delete name=penalty
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"No issues here,{p15} Your Honor.{p30} Just wanted to clarify."
+"Let's move on."
+
+goto men1Dend
+
+label Still Unharmed?
+delete name=penalty
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"{sfx huh}Just to be clear,{p15} the victim wasn't wounded at that point?"
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"Heh,{p15} what are you playing at?{p30} 'Course the lady didn't have any visible wounds yet."
+emo smug
+"Trust me,{p15} I've seen a lot of grievously wounded folks.{p30} She wasn't walking like one."
+
+bg defensebg
+fg dbench
+char aurelia e=d-sweat
+"{c b}{sfx waaah}(Okay,{p15} what is going down at that amusement park?{p30} Should we be concerned?)"
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"{sfx idea}But that's besides the point,{p15} isn't it?{p30} You know damn well she couldn't have been shot then."
+set _ev autopsy
+showevl
+emo smug
+"Not like anyone's still walking around after getting their heart popped."
+hideevl
+"{sfx anger}{s10}Gotta do better than that,{p15} miss.{p30} I've been paying attention,{p15} too."
+
+bg judgebg
+fg judgeseat stack
+char judge
+"Well,{p15} the witness does have a point."
+
+label nelandvic4
+bg judgebg
+fg judgeseat stack
+char judge
+"Still,{p15} does the victim still being unharmed at this point create any major problem to you?"
+list nelvic4
+set _list_back_button false
+li It's astoundingly problematic
+li It's disappointingly unproblematic
+showlist
+
+label It's astoundingly problematic
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"{sfx huh}Yeah,{p15} this is a huge issue."
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo smug
+"{sfx shocked}{s10}Hahahahar,{p15} this is gonna be good!"
+
+bg judgebg
+fg judgeseat stack
+char judge
+"Very well.{p30} If you say so,{p15} then I am sure you have grounds for it."
+
+label nelandvic5
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+set _textbox_skipupdate true
+"What is the problem with the victim being unharmed before entering the study?"
+pause 120
+set _textbox_skipupdate false
+set _cr_back_button false
+set _profiles_enabled false
+penalty threat=15
+present fail=present_fail noback
+
+label autopsy2
+set _profiles_enabled true
+
+att
+
+bg defensebg
+fg dbench
+char aurelia e=d-index
+"We were under the mistaken assumption that the witness only had one wound."
+"{e d-lecture}{sfx idea}{f10}However,{p15} the new autopsy clearly mentions a small cut in the victim's finger."
+
+srsly
+
+bg prosecutorbg2
+fg pbench2
+char victoria
+"I recommend educating yourself on this concept called logic."
+"{e think}{sfx idea}Because you're not making the point you think you're making."
+"{e think}The autopsy mentions other wounds aside from the fatal one..."
+"...but we cannot deduce when the victim received them."
+"{e point}{sfx shocked}{s10}You have no grounds for suggesting she didn't receive the other wounds during the struggle!"
+
+bg judgebg
+fg judgeseat stack
+char judge
+"The plaintiff is,{p15} of course,{p15} completely right."
+"{e warning}Please review your logic,{p15} Ms. Chase."
+sfx penalty
+penalty -15
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"{sfx whoops}{c b}(They mentioned the autopsy report,{p15} so I thought presenting it might be good idea...{p50} guess not.)"
+"{e d-think}{c b}(Come on,{p15} put some actual thought into this!)"
+
+goto men1Dend
+
+label blood
+set _profiles_enabled true
+set _cr_back_button true
+
+att
+music_fade_out
+mus
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+setflag bloodpres
+"There's quite the problem with you saying the victim was unharmed."
+"{e crossed}It's a faint trail,{p15} so I'm not surprised if you missed it,{p15} but..."
+specialrecordvol2
+set _ev blood
+showevr
+"{e d-smug}{sfx idea}{f10}There is,{p15} nonetheless,{p15} some blood present in the hallway."
+hideevr
+
+vobj
+
+bg prosecutorbg2
+fg pbench2
+char victoria e=think
+"Blood in the hallway?{p30} What in the..."
+"{e normal}{sfx anger}{s10}It's irrelevant!{p30} It couldn't have been the victim's!"
+
+bg defensebg
+fg dbench
+char aurelia e=d-halt
+"{sfx idea}Couldn't have been the victim's?{p30} Not so fast."
+set _ev autopsy
+showevr
+char aurelia e=d-lecture
+"Thanks for reminding me of the autopsy report.{p30} I've given it a good read as well."
+hideevr
+char aurelia e=d-smug
+"{sfx idea}And it clearly mentions the victim having a little cut on her index finger."
+
+bg judgebg
+fg judgeseat stack
+char judge e=surprised
+"S-So you're suggesting the blood is from that cut?"
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"Would be the best explanation,{p15} given the evidence.{p30} Don't you agree?"
+
+srsly
+music_fade_out
+mus
+
+bg prosecutorbg2
+fg pbench2
+char victoria
+"Congratulations.{p30} Against all odds,{p15} I am impressed."
+"{e think}Impressed by the amount of ignorance you must have to think this is a worthwhile argument."
+"{e normal}You would undoubtedly use the Fool's Gambit and assume it is a good chess opening."
+
+bg judgebg
+fg judgeseat stack
+char judge e=surprised
+"Is...{p50} is there an issue with the defendant's assertion?"
+
+bg prosecutorbg2
+fg pbench2
+char victoria
+"Even you cannot see it.{p30} I will allow myself to break it down for you then."
+"{e think}{sfx huh}Firstly,{p15} it is pure speculation.{p30} You cannot even prove this is the victim's blood."
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"How about we just analyze it then?"
+
+bg prosecutorbg2
+fg pbench2
+char victoria e=think
+"{sfx key2}Secondly,{p15} even if you were to prove it,{p15} it would be inconsequential."
+"{e beating}If we hypothetically accepted your explanation as true,{p15} what would it change?"
+"A small cut wound in the victim's finger is easy to miss."
+"There would be no actual contradiction with the witness statement."
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"I will give you that,{p15} but it still changes the facts,{p15} no?"
+
+bg prosecutorbg2
+fg pbench2
+char victoria e=smug
+"{sfx key3}Yes,{p15} truly outstanding.{p30} The victim had a tiny cut in her hand beforehand."
+"Perhaps she tested the sharpness of the knife?{p30} Quite the important question to consider."
+char victoria e=objecting
+pause 80
+"{e point}{sfx shocked}This is nit-picking of the highest order!{p30} It's not worth confirming such an immaterial claim."
+
+bg courtroom2
+fg judgeOV stack
+fg victoriaOV stack
+fg aureliaOV stack
+fg triplewitnessOV stack
+
+sfx Jury
+pause 120
+
+bg judgebg
+fg judgeseat stack
+char judge e=surprised
+"Well,{p15} you are quite correct."
+"{e normal}This does not appear to actually change anything,{p15} and I do not see how it could if pursued."
+moderato2016
+"The witness testimony remains decisive."
+
+bg defensebg
+fg dbench
+char aurelia e=crossed
+"{sfx waaah}{s10}{c b}(I thought I was onto something there for a second.)"
+"{c b}(But I guess it doesn't matter if the point I make is too trivial to pursue.)"
+"{e d-think}{c b}{sfx huh}(Maybe there's a {c r}better context{c b} to present this issue?)"
+"{e d-normal}{c b}(I should look for a way to make this a stronger point.)"
+
+goto men1Dend
+
+label present_fail
+set _profiles_enabled true
+
+att
+
+bg defensebg
+fg dbench
+char aurelia e=d-lecture
+"I'd say this makes it pretty strange the victim was unharmed,{p15} wouldn't you agree?"
+
+bg judgebg
+fg judgeseat stack
+char judge
+"No,{p15} I would not."
+"{e warning}At best,{p15} this raises the question why you're still this unharmed.{p30} Or rather,{p15} unpenalized."
+sfx penalty
+penalty -15
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{c b}(Didn't know it was this easy to earn penalties.)"
+"{e d-normal}{c b}(I'd better be more careful before I try anything like that again.)"
+
+goto men1Dend
+
+label It's disappointingly unproblematic
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"No issues here,{p15} Your Honor.{p30} Just wanted to clarify."
+"Let's move on."
+
+label men1Dend
+fg black fade 1000
+pause 30
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+fg black z=10
+fade out name=black speed=3
+pause 10
+scrollpenaltyin
+goto men1E
+
+label press men1E
+scrollpenaltyout
+
+ahi
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"But were you actually certain the shot you heard came from that room?"
+"{e crossed}Isn't it possible you simply assumed that?"
+"{e d-smile}{c b}(It can be pretty hard to determine the direction of a shot,{p15} maybe I can at least cast doubt here.)"
+
+bg widewitnessbg x=-100
+char mono e=normal x=80
+char neland e=normal x=-80 stack
+char dowe stack
+fg witstand stack 
+
+setvar _speaking dowe
+emo normal
+"{sfx idea}You doubt my hearing,{p15} lass?{p30} I heard it loud and clear."
+emo mad
+"{sfx anger}{s10}It was coming from that direction,{p15} no two ways about it!"
+
+bg judgebg
+fg judgeseat stack
+char judge e=nodding
+pause 80
+char judge
+"I remember it,{p15} too.{p30} The sound was a bit muffled because it came from another room."
+"That made it fairly easy to tell which direction it came from."
+
+bg widewitnessbg x=-100
+char mono e=normal x=80
+char neland e=normal x=-80 stack
+char dowe stack
+fg witstand stack 
+
+setvar _speaking dowe
+emo normal
+"I'm glad you see it my way,{p15} sir."
+
+bg defensebg
+fg dbench
+char aurelia e=crossed
+"{sfx waaah}{s10}{c b}(You're not a witness,{p15} Your Honor.)"
+"{e d-sweat}{c b}(Though I wouldn't put it past Victoria to try and summon the judge to the stand.)"
+"{e d-normal}Fine,{p15} let's accept that the shot came from roughly that direction..."
+"{e d-lecture}{sfx anger}{s10}How sure are you that it was actually a gunshot,{p15} though?"
+
+bg widewitnessbg x=-100
+char mono e=normal x=80
+char neland e=normal x=-80 stack
+char dowe stack
+fg witstand stack 
+
+setvar _speaking dowe
+emo mad
+"Do you think I've never heard a shot in my life?"
+emo normal
+"{sfx anger}{s10}I've watched enough movies to know that sounded exactly like one!"
+"There's no two ways about this.{p30} That{p30} {f10}{sfx quietgunshot}bang{p30} sound was a gunshot."
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"So it didn't sound like a{p30} {s10}{sfx loudgunshot}BAAANG?"
+
+bg widewitnessbg x=-100
+char mono e=normal x=80
+char neland e=normal x=-80 stack
+char dowe stack
+fg witstand stack 
+
+setvar _speaking dowe
+emo normal
+"{sfx anger}Don't torture my ears like that!{p30} This body is in enough pain."
+
+macro srsly
+sfx victoria/seriously
+fg Seriously
+s10
+pause 5
+endmacro
+
+srsly
+
+bg prosecutorbg2
+fg pbench2
+char victoria
+"If you have time to fool around,{p15} consider using it to resign."
+"I suppose a gunshot fired in a locked room might sound that obnoxiously loud."
+"{e smug}{sfx idea}But that's precisely where you heard it before,{p15} so it's no surprise you'd assume that volume."
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{sfx waaah}Let's...{p50} let's move on to what happened next."
+
+fg black fade 1000
+pause 30
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+fg black z=10
+fade out name=black speed=3
+pause 10
+scrollpenaltyin
+resume
+
+label press men1F
+scrollpenaltyout
+
+ahi
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"You seem pretty confident.{p30} Could you actually have paid attention to the hallway that much?"
+"{e d-think}{sfx idea}It's one thing if someone passed by you,{p15} but you can't be certain nobody came from the other way."
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"Listen,{p15} miss.{p30} We were standing there for the whole break."
+"{sfx anger}{s10}I would have spotted any dodgy business in that hallway!"
+emo happy
+"It's not a place folks are supposed to walk around in,{p15} after all."
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"That's pretty confident.{p30} What about things other than people then?"
+"{e d-lecture}Let's say someone had dropped a gun in a corner."
+"Maybe some string was running by you on the floor,{p15} even.{p30} I doubt you could spot that."
+
+bg prosecutorbg2
+fg pbench2
+char victoria e=think
+"Of all the things...{p50} you simply had to go for that."
+
+bg defensebg
+fg dbench
+char aurelia e=d-smug
+"{c b}(Yeah,{p15} cause I remember you hate it.)"
+
+bg widewitnessbg
+char mono e=sweat x=160
+char neland e=normal stack
+char dowe e=normal stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo happy
+"{sfx idea}You're taking me pretty lightly,{p15} eh?"
+emo normal
+"When I say I'd have spotted any dodgy business,{p15} I damn well mean it.{p30} Got a nose for that stuff."
+emo smug
+"Besides,{p15} there's not many places to hide anything in that hallway."
+"{sfx anger}{s10}The place remained totally spotless through the break,{p15} lass!{p30} I'd be willing to bet 10 grand on it."
+scrollto name=dowe
+
+setvar _speaking dowe
+emo mad
+"{sfx shouting}{s10}Twenty!{p30}{next}"
+scrollto name=neland
+
+setvar _speaking neland
+emo angry
+"{sfx shocked}{s10}Thirty!{p30}{next}"
+
+scrollto name=dowe
+
+setvar _speaking dowe
+emo mad
+"{sfx shouting}{s10}Fifty!{p30}{next}"
+
+scrollto name=neland
+
+setvar _speaking neland
+emo angry
+"{sfx gameover}{s10}ONE HUNDRED!{p30}{next}"
+
+fg gavel
+
+pause 10
+
+bg judgebg
+fg judgeseat stack
+char judge
+"{sfx idea}Sold to the middle-aged gentleman in the black suit!"
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{sfx whoops}{c b}(We're not bidding on the verdict,{p15} I hope.)"
+"{e d-normal}Okay,{p15} so you insist you didn't see anything except for me and the victim."
+
+bg judgebg
+fg judgeseat stack
+char judge
+
+"You haven't made your own stance clear,{p15} Ms. Chase."
+"Do you think there's an issue with what the witnesses saw?"
+
+label nelanddoor1
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"...The problem is that "
+list neldoor1
+set _list_back_button false
+li they didn't see anyone else.
+li they didn't see anything else.
+li there is no problem.
+showlist
+
+label there is no problem.
+delete name=penalty
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"There is,{p15} in fact,{p15} no problem."
+
+bg judgebg
+fg judgeseat stack
+char judge
+"...I suppose I can understand why this is a problem for you."
+"Let us continue,{p15} then."
+
+goto men1Fend
+
+label they didn't see anyone else.
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"You swear there wasn't anyone else in the hallway?{p30} That's hard to believe."
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"{sfx anger}Hah!{p30} Here comes the good shit!"
+
+label nelanddoor2
+set _textbox_skipupdate true
+setvar _speaking neland
+"Alright,{p15} miss.{p30} Give it to us.{p30} Who should we have seen in that hallway?"
+pause 120
+set _textbox_skipupdate false
+set _cr_back_button false
+set _evidence_enabled false
+penalty threat=15
+present fail=present_fail noback
+
+label holden2$
+set _evidence_enabled true
+
+att
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"You should have definitely seen...{p50} this person..."
+
+bg judgebg
+fg judgeseat stack
+char judge
+"{spd 0.3}...{p30}{next}"
+
+bg prosecutorbg2
+fg pbench2
+char victoria
+"{spd 0.3}...{p30}{next}"
+
+bg courtroom2
+fg judgeOV stack
+fg victoriaOV stack
+fg aureliaOV stack
+fg triplewitnessOV stack
+"{sound blipnone}{spd 0.3}...{p30}{next}"
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"{sfx shocked}{s10}Ahahar!{p30} Gotta explain that one to me!"
+emo smug
+"{sfx idea}Did the lady have a twin?{p30} That what you're trying to imply,{p15} miss?"
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{sfx whoops}Forget I said anything.{p30} Please."
+
+bg judgebg
+fg judgeseat stack
+char judge
+"I wish I could forget these sorts of arguments."
+
+bg prosecutorbg2
+fg pbench2
+char victoria
+"Then your memory appears to be better than the defendants."
+"{e think}She didn't even remember that the witnesses already mentioned seeing Ms. Holden."
+sfx penalty
+penalty -15
+
+bg defensebg
+fg dbench
+char aurelia e=d-sweat
+"{c b}(I must have forgotten to run that one by my brain.)"
+"{e d-normal}{c b}(Let's continue and hope I do actually forget this ever happened.)"
+
+goto men1Fend
+
+label present_fail
+set _evidence_enabled true
+
+att
+
+bg defensebg
+fg dbench
+char aurelia e=crossed
+"You should have seen this person."
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"You sure,{p15} miss?{p30} Got any proof that person was up to any business there?"
+
+bg defensebg
+fg dbench
+char aurelia e=crossed
+"{sfx waaah}That's a bit tricky."
+
+bg judgebg
+fg judgeseat stack
+char judge
+"I know you're still new to this,{p15} Ms. Chase."
+"{e warning}But you should understand that you can't make baseless claims like this!"
+sfx penalty
+penalty -15
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{c b}(I don't think there's anyone I can reasonably place there.{p30} Back to the drawing board...)"
+
+goto men1Fend
+
+label they didn't see anything else.
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"There wasn't anything out of the ordinary in the hallway?{p30} I find that highly concerning."
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo normal
+"Strap yourselves in,{p15} folks.{p30} Here it comes."
+
+label nelanddoor3
+emo smug
+set _textbox_skipupdate true
+"What do you think we should have noticed in that hallway,{p15} miss?"
+pause 120
+set _textbox_skipupdate false
+set _cr_back_button false
+set _profiles_enabled false
+penalty threat=15
+present fail=present_fail noback
+delete name=penalty
+
+label blood 
+music_fade_out nowait
+mus
+att
+script scene24
+
+label present_fail
+set _profiles_enabled true
+
+att
+
+bg defensebg
+fg dbench
+char aurelia e=d-lecture
+"What about this right here?"
+bg widewitnessbg x=-100
+char mono e=normal x=80
+char neland e=normal x=-80 stack
+char dowe stack
+fg witstand stack 
+
+setvar _speaking dowe
+emo normal
+"Hm,{p15} maybe for fifty dollars."
+scrollto name=neland
+
+setvar _speaking neland
+emo normal
+"{sfx anger}Hah!{p30} That's not even worth bidding on.{p30} You can have it."
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"...Okay.{p30} I'll take any money I can get."
+
+bg judgebg
+fg judgeseat stack
+char judge e=surprised
+"{sfx waaah}You're not allowed to sell the evidence,{p15} Ms. Chase!"
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo smug
+"{sfx shocked}{s10}Ahahar.{p30} Thanks,{p15} miss.{p30} Now that's rich!"
+emo happy
+"{sfx idea}Now sell me on why this ought to have been in the hallway."
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"I...{p50} can't,{p15} really."
+
+bg judgebg
+fg judgeseat stack
+char judge 
+"..."
+"{e warning}Well,{p15} I've got a penalty to sell you.{p30} Actually,{p15} it's for free."
+sfx penalty
+penalty -15
+
+bg defensebg
+fg dbench
+char aurelia e=d-sweat
+"{e d-think}{c b}(What a deal.)"
+"{c b}(I need to adjust my approach.)"
+"{c b}(Can't just present anything if there's no reason to think it was even there.)"
+
+label men1Fend
+fg black fade 1000
+pause 30
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+fg black z=10
+fade out name=black speed=3
+pause 10
+scrollpenaltyin
+goto men1G
+
+label press men1G
+scrollpenaltyout
+
+ahi
+
+bg defensebg
+fg dbench
+char aurelia e=crossed
+"{sfx anger}{s10}I'm very sure I never said that sentence in my life!"
+
+bg widewitnessbg x=-160
+char mono e=normal
+char neland e=normal x=-160 stack
+char dowe stack x=-80
+fg witstand stack x=-80
+
+setvar _speaking mono
+emo sweat
+"{sfx owned}{s10}A-As I said,{p15} ma'am.{p30} I heard it like that."
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"The door was still locked at that point,{p15} right?"
+
+bg widewitnessbg x=-160
+char mono e=normal
+char neland e=normal x=-160 stack
+char dowe stack x=-80
+fg witstand stack x=-80
+
+setvar _speaking mono
+emo side
+"I,{p15} uh....{p50} y-{p30} maybe?"
+scrollto name=dowe
+
+setvar _speaking dowe
+emo mad
+"{sfx anger}{s10}Don't let that youngster pressure you,{p15} Mono!{p30} We hadn't broken down the door yet."
+scrollto name=mono
+
+setvar _speaking mono
+emo normal
+"R-Right.{p30} So the voice was a little muffled."
+
+bg defensebg
+fg dbench
+char aurelia e=crossed
+"Then isn't there a chance you were just mistaken?"
+"It could have been some other woman doing an imitation!"
+
+bg widewitnessbg x=-160
+char mono e=normal
+char neland e=normal x=-160 stack
+char dowe stack x=-80
+fg witstand stack x=-80
+
+setvar _speaking mono
+emo closed
+"{p50}{e side}She really sounded like t-the defendant though."
+
+vobj
+
+bg prosecutorbg2
+fg pbench2
+char victoria e=smug
+"If you happen to remember,{p15} the only other woman found in the room was dead."
+"{e normal}She also had a very different voice."
+"{e beating}With that in mind,{p15} do you have any real evidence you weren't the one to say those words?"
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{sfx waaah}{s10}I'm not sure how I'm meant to prove that."
+"{e crossed}It's not like I keep filming my mouth 24/7."
+
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+
+setvar _speaking neland
+emo smug
+"That doesn't sound like it's our problem."
+
+bg prosecutorbg2
+fg pbench2
+char victoria
+"{sfx idea}All of this has shown how little the Queens of Crime really amount to."
+"{e think}You could not stay silent for a second and got caught right away."
+"Truthfully,{p15} your incompetence might be the real crime."
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"{c b}(A real-life mute button sure would be handy right now.)"
+"{c b}{e d-sweat}(Jokes aside,{p15} I've got to do something about this slander.)"
+"{e crossed}{c b}(It's the only part of this testimony I know I'm definitely not responsible for.)"
+
+fg black fade 1000
+pause 30
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+fg black z=10
+fade out name=black speed=3
+pause 10
+goto cctalk
+
+label none
+aobj
+
+penalty threat=15
+bg defensebg
+fg dbench
+char aurelia e=d-point
+"There's a contradiction in this statement!"
+
+bg judgebg
+fg judgeseat stack
+char judge e=surprised
+"What gave you that idea,{p15} defendant?"
+
+bg defensebg
+fg dbench
+char aurelia e=crossed
+"My sources are confidential."
+
+bg prosecutorbg2
+fg pbench2
+char victoria
+"I'm afraid they're painfully evident."
+"{e think}Such an abominable argument could only be conceived by a mind of your level."
+
+bg judgebg
+fg judgeseat stack
+char judge
+"Well,{p15} I won't make such presumptions."
+"{e warning}But no matter where this misinformation came from,{p15} you presented it to this court.{p30}"
+sfx penalty
+penalty -15
+pause 30
+is penalty 0 gameover
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{c b}(Back to the drawing board it is.)"
+
+fg black fade 1000
+pause 30
+bg widewitnessbg
+char mono e=normal x=160
+char neland e=normal stack
+char dowe stack x=80
+fg witstand stack x=80
+fg black z=10
+fade out name=black speed=3
+pause 10
+scrollpenaltyin
+cross_restart
+
+label gameover
+
+music_fade_out
+mus
+
+fg gavel
+
+pause 10
+
+bg judgebg
+fg judgeseat
+char judge e=normal
+"That's enough!"
+"This court sees no reason to further prolong the trial!"
+"This is a clear-cut case with little reason for doubt."
+"Further deliberation will not be required here."
+"This court finds the defendant,{p15} Ms. Aurelia Chase..."
+
+fg guilty name=g nowait
+pause 150
+delete name=g
+
+bg judgebg
+fg judgeseat
+char judge e=warning
+"The defendant will be held liable for the amount requested by the plaintiff."
+"Suitable criminal charges will be recommended to the prosecutor's office."
+char judge e=normal
+"That is all.{p30} This court is adjourned!"
+
+fg gavel
+pause 10
+
+sfx gameover
+fg Elevator nowait
+pause 30
+fadeout name=Elevator
+
+bg black fade
+fg cardsoffate fade nowait
+set _textbox_bg general/textbox
+char aurelia hide
+nt
+"{c p}{sound blipnone}In face of ironclad testimony,{p15} the facade of our culprit quickly crumbled."
+"{c p}{sound blipnone}There is a reason witnesses are essential in a courtroom,{p15} after all."
+"{c p}{sound blipnone}Nothing cuts off the branches of possibilities as efficiently as the razor of observations."
+"{c p}{sound blipnone}Could there be another path to observe?{p30} What do the cards think?"
+"{c p}{sound blipnone}They have chosen The Moon.{p30} Stick to the facts and don't let deluded by unproven assertions."
+"{c p}{sound blipnone}The game has only just begun..."
+
+label gameover2
+list go2 bg=mainlol
+set _list_back_button false
+li Return to last testimony
+showlist
+
+label Return to last testimony
+goto test2start

@@ -1,5 +1,5 @@
 addev presspass
-addev gunB
+addev gunC
 addev cake
 addev lilian$
 addev cova$
@@ -7,17 +7,25 @@ addev gardt$
 addev holden2$
 addev susan2$
 addev victoria$
-addev autopsy
-addev tv
-addev door
-addev knife
+addev autopsy2
+addev tv2
+addev door2
+addev knife3
 addev blood
 addev key
 addev than2$
 addev news
 addev spray
+addev hunt1
+addev suitcase
+addev fork
+addev diagram
+addev hellinger$
+addev neland$
+addev dowe$
+addev mono$
 
 setflag offtrain
 setflag coastdone
 textskipcheck
-script scene19menu
+script scene23mentest1

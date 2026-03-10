@@ -1,0 +1,282 @@
+# Scroll to: Will attempt to center the world on the specified object.
+# Usage: scrollto name=CHARACTER/OBJECT
+macro scrollto
+
+# Talkfix
+setprop blink name=mono prop=supermode
+setprop blink name=neland prop=supermode
+setprop blink name=dowe prop=supermode
+
+# Get target sprite position
+getprop _x_pos name=$name prop=x
+
+# Invert +/-
+setvar _scroll_delta 0
+subvar _scroll_delta $_x_pos
+
+# Scroll
+scroll name=widewitnessbg 
+scroll char mono e=normal x=$_scroll_delta speed=10
+scroll char neland e=normal stack
+scroll char dowe stack
+
+endmacro
+
+set _textbox_bg general/textbox2
+set _cr_button true
+set _profiles_enabled true
+textskipcheck
+delete name=penalty
+
+music_fade out nowait
+mus
+macro aobj
+sfx aurelia/objection
+fg ObjectionAnim
+pause 15
+endmacro 
+aobj
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{c b}(Well,[#125] just got to take the gamble here.)"
+"{e d-normal}{sfx huh}Witness.[#250] You say you were sure you didn't touch anything."
+"{e crossed}{sfx key2}You clarified that you are sure because you would have felt it.[#250] Correct?"
+
+bg widewitnessbg x=-100
+char mono e=normal x=80
+char neland e=normal x=-80 stack
+char dowe stack
+fg witstand stack 
+
+setvar _speaking dowe
+emo normal
+"Of course.[#250] That's just common sense."
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"I agree."
+"{e crossed}{sfx huh}Normally,[#125] people would certainly be able to feel if they touched anything."
+"There just happens to be something you mentioned earlier."
+specialrecordvol2
+"{e d-smug}{sfx idea}You mentioned that you have issues feeling anything in your legs."
+"{sfx shouting}{e d-point}{s10}So how would you be able to tell if you stepped on anything?"
+
+bg widewitnessbg x=-100
+char mono e=sweat x=80
+char neland e=normal x=-80 stack
+char dowe stack
+fg witstand stack 
+
+setvar _speaking dowe
+emo normal
+"{sfx waaah}{s10}Ah![#250] That's..."
+
+macro vobj
+sfx victoria/objection
+fg ObjectionAnim
+pause 15
+endmacro
+
+vobj
+
+bg prosecutorbg2
+fg pbench2
+char victoria e=think
+"This has to be your worst idea of an "objection" so far,[#125] and it's not for lack of competition."
+"You're contradicting the witness on how sure he was whether he stepped on something.[#250] Seriously?"
+
+bg defensebg
+fg dbench
+char aurelia e=d-lecture
+"This is actually important in this case,[#125] you know?"
+"{e d-normal}{sfx idea}If the witness could have stepped on something without noticing..."
+"{e d-smug}That opens up a real possibility he disturbed the scene unwittingly."
+
+bg judgebg
+fg judgeseat stack
+char judge e=thinking
+"{p40}{e normal}This may be easy to verify."
+"Please show us the underside of your shoes,[#125] witness."
+
+music_fade_out
+fg black fade
+pause 150
+char dowe hide
+"{sfx owned}W-What is this madness--"
+nt
+"{f10}{next}"
+delete name=black
+
+whitenight
+setvar _speaking dowe
+emo mad
+"{sfx ohno}{f10}There's a hole in my left foot!"
+
+bg courtroom2
+fg judgeOV stack
+fg victoriaOV stack
+fg aureliaOV stack
+pause 120
+
+sfx Jury
+pause 60
+fg gavel-3
+
+bg judgebg
+fg judgeseat stack
+char judge e=surprised
+"{sfx waaah}A-Are you alright,[#125] witness?"
+
+bg widewitnessbg x=-100
+char mono e=sweat x=80
+char neland e=normal x=-80 stack
+char dowe stack
+fg witstand stack 
+
+setvar _speaking dowe
+emo mad
+"{sfx shouting}{s10}Call an ambulance already!"
+scrollto name=neland
+
+setvar _speaking neland
+emo normal
+"He'll be fine.[#250] Wound's not that deep.[#250] The bleeding's stopped."
+scrollto name=dowe
+
+setvar _speaking dowe
+emo mad
+"{sfx waaah}I'll be fine!?[#250] Something went all the way through my sole![#250] How did that happen?"
+scrollto name=neland
+
+setvar _speaking neland
+emo normal
+"Must have been a pretty sharp object,[#125] I'll give you that."
+scrollto name=dowe
+
+setvar _speaking dowe
+emo normal
+"{s10}You think this is a joke?[#250] I have {sfx anger}{s10}{c r}hemophilia{c w}!{p30}My blood doesn't dry that fast!"
+"{sfx shocked}{s10}I could have very well bled out from this!"
+scrollto name=neland
+
+setvar _speaking neland
+emo normal
+"Heh,[#125] explains how you managed to leave such a big mess."
+music_fade_out
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"{c b}(Hemophilia,[#125] too?[#250] Almost starting to feel sorry for him.[#250] Then again,[#125] he's got money to make up for it.)"
+delev dowe2$
+delev mono$
+addev dowe3$
+addev mono$
+"{e crossed}...Anyway,[#125] there you have it."
+"This witness stepped on something at the scene that caused this wound."
+"{e d-halt}{sfx huh}The question,[#125] just what could have made this happen?"
+
+bg judgebg
+fg judgeseat stack
+char judge e=surprised
+"Wasn't there a knife at the scene?[#250] That must have been what he stepped on."
+
+bg defensebg
+fg dbench
+char aurelia e=d-smug
+"That's impossible."
+set _ev knife
+showevr
+"{e d-lecture}{sfx idea}The knife at the scene had no blood on its blade."
+hideevr
+"{e d-normal}No,[#125] there must have been something else there."
+"{e d-index}{sfx shocked}Something that has inexplicably not been found at the scene!"
+
+macro srsly
+sfx victoria/seriously
+fg Seriously
+s10
+pause 5
+endmacro 
+srsly
+
+bg prosecutorbg2
+fg pbench2
+char victoria
+"{sfx huh}I'll take this opportunity to stop you before this becomes any more disastrous."
+wassermusik
+"{e smug}After all,[#125] there is only one good,[#125] knowledge,[#125] and one evil,[#125] ignorance."
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"Let me guess,[#125] Schopenhauer?"
+
+bg prosecutorbg2
+fg pbench2
+char victoria e=think
+"{sfx idea}Socrates,[#125] you philistine."
+"It took you quite a bit of mental flailing to arrive at this mysterious object."
+"{e smug}{sfx huh}Unfortunately,[#125] it seems you are incapable of taking the final step.[#250] I will assist you."
+set _ev door
+showevl
+"{e think}{sfx idea}Perhaps this is enough of a hint?"
+hideevl
+
+bg defensebg
+fg dbench
+char aurelia e=d-think
+"The door to the crime scene?"
+"{e d-normal}Not sure what you're trying to get at."
+
+bg prosecutorbg2
+fg pbench2
+char victoria e=think
+"Oh,[#125] it's so trivial I thought even you might be able to see it."
+set _ev door
+showevl
+"{e normal}The door was damaged when these witnesses broke it open."
+hideevl
+"{e think}This caused parts of the frame near the lock to splinter and scatter on the floor inside."
+set _ev dowe$
+showevl
+"{e smug}{sfx idea}I found the blood of the witness on at least one of those splinters."
+hideevl
+
+bg defensebg
+fg dbench
+char aurelia e=d-normal
+"Hold up...[#500]{n}{e crossed}{sfx owned}{s10}You did what!?"
+
+bg prosecutorbg2
+fg pbench2
+char victoria e=think
+set _ev blood
+showevl
+"By the way,[#125] this blood in the hallway?"
+hideevl
+"{e normal}{sfx idea}Did you seriously believe I missed that?[#250] Or were you simply praying for a miracle?"
+"{e beating}When will you understand that I,[#125] Victoria Priston,[#125] never make mistakes?"
+set _ev blood
+showevl
+"{e normal}{sfx shocked}{s10}I already knew this was the old man's blood before the trial started."
+
+bg defensebg
+fg dbench
+char aurelia e=d-point
+"{sfx anger}{s10}Why didn't you just say so then?"
+"You sure acted all flustered and surprised when I first brought it up!"
+
+bg prosecutorbg2
+fg pbench2
+char victoria 
+"It simply seemed too trivial a matter to mention."
+"{e think}I was indeed quite surprised when you decided to point it out."
+"{e normal}{sfx idea}"Did she really not even reason out that much yet?" I pondered to myself."
+"{e smug}It was like watching a toddler learning to walk.[#250] I had to see how far you could go."
+char victoria e=objecting
+pause 80
+"{e point}{sfx shocked}{s10}Unfortunately,[#125] you never fail to disappoint!"

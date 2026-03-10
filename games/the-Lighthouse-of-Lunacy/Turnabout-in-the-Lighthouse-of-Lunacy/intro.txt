@@ -7,6 +7,7 @@ set color_g 00F61C # Typewriter text, for stuff like date and time and also aski
 set color_r ff5a00 # important details text
 set color_w FFFFFF # normal speaking text
 set color_p 4040b4 # cards of fate text
+set color_gr 3d3d3d # waldis neland text
 
 set _bigbutton_img general/empty_buttonpress
 set _bigbutton_cross general/cross_exam_buttons
